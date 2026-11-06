@@ -202,7 +202,7 @@ footer a { color: var(--purple); }
 .signup { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: center; padding: 26px; margin: 36px 0 0; }
 .signup h2 { font-size: 1.5rem; margin-bottom: 6px; }
 .signup p { margin: 0; color: var(--muted); line-height: 1.5; }
-.signup form { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.signup-form iframe { display: block; width: 100%; min-height: 160px; }
 .signup .thanks { display: none; grid-column: 1 / -1; color: var(--purple); font-weight: 700; }
 .signup form.sent .thanks { display: block; }
 .signup form.sent input, .signup form.sent button { opacity: .5; pointer-events: none; }
