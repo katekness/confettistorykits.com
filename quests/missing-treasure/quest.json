@@ -15,8 +15,24 @@
     "gold": "#e8b44a"
   },
   "characters": {
-    "ivy": { "name": "Detective Ivy", "img": "img/ivy.webp", "avatar": "img/ivy-face.webp", "voice": { "pitch": 1.2, "rate": 0.97 } },
-    "theo": { "name": "Detective Theo", "img": "img/theo.webp", "avatar": "img/theo-face.webp", "voice": { "pitch": 0.95, "rate": 0.98 } }
+    "ivy": {
+      "name": "Detective Ivy",
+      "img": "img/ivy.webp",
+      "avatar": "img/ivy-face.webp",
+      "voice": {
+        "pitch": 1.2,
+        "rate": 0.97
+      }
+    },
+    "theo": {
+      "name": "Detective Theo",
+      "img": "img/theo.webp",
+      "avatar": "img/theo-face.webp",
+      "voice": {
+        "pitch": 0.95,
+        "rate": 0.98
+      }
+    }
   },
   "setup": {
     "nameLabel": "Lead detective's name",
@@ -43,16 +59,77 @@
     "button": "Open the case file!"
   },
   "steps": [
-    { "n": 1, "speaker": "ivy", "riddle": "Detectives, the case has begun! Look where cold snacks hide from the sun.", "hint": "Brrr! Check the fridge.", "spot": "Inside or near the refrigerator" },
-    { "n": 2, "speaker": "theo", "riddle": "Every good detective keeps clean. Check by the sink where the soap is seen.", "hint": "Where do you wash your hands?", "spot": "Bathroom sink" },
-    { "n": 3, "speaker": "ivy", "riddle": "This clue is soft and comfy too. Search the couch, it's hiding from you!", "hint": "Peek between the couch cushions.", "spot": "Couch cushions" },
-    { "n": 4, "speaker": "theo", "riddle": "Detectives read to learn the facts. Look where the books stand in their stacks.", "hint": "Check the bookshelf.", "spot": "Books or a bookshelf" },
-    { "n": 5, "speaker": "ivy", "riddle": "Every suspect leaves a track. Check the shoes, then hurry back!", "hint": "Look where the shoes are kept.", "spot": "Shoe area or entryway" },
-    { "n": 6, "speaker": "theo", "riddle": "Even detectives need a rest. Look where pillows do their best.", "hint": "Check a bed or under a pillow.", "spot": "A bed or pillow" },
-    { "n": 7, "speaker": "ivy", "riddle": "A clue is hiding with the toys. Search with care and not much noise!", "hint": "Peek around the toys.", "spot": "Toy box or playroom" },
-    { "n": 8, "speaker": "theo", "riddle": "Round and round the clothes all go. Check the washer, high or low.", "hint": "Where does laundry get washed?", "spot": "Washer or laundry area" },
-    { "n": 9, "speaker": "ivy", "riddle": "Coats and jackets hang in a line. Check the closet, the clue is fine!", "hint": "Open the coat closet.", "spot": "Coat closet" },
-    { "n": 10, "speaker": "theo", "riddle": "Super sleuths, you've cracked the case! Crawl down low where the chairs all meet. The treasure waits beneath your feet!", "hint": "Look under the table!", "spot": "Under the kitchen or dining table", "final": true }
+    {
+      "n": 1,
+      "speaker": "ivy",
+      "riddle": "Detectives, the case has begun! Look where cold snacks hide from the sun.",
+      "hint": "Brrr! Check the fridge.",
+      "spot": "Inside or near the refrigerator"
+    },
+    {
+      "n": 2,
+      "speaker": "theo",
+      "riddle": "Every good detective keeps clean. Check by the sink where the soap is seen.",
+      "hint": "Where do you wash your hands?",
+      "spot": "Bathroom sink"
+    },
+    {
+      "n": 3,
+      "speaker": "ivy",
+      "riddle": "This clue is soft and comfy too. Search the couch, it's hiding from you!",
+      "hint": "Peek between the couch cushions.",
+      "spot": "Couch cushions"
+    },
+    {
+      "n": 4,
+      "speaker": "theo",
+      "riddle": "Detectives read to learn the facts. Look where the books stand in their stacks.",
+      "hint": "Check the bookshelf.",
+      "spot": "Books or a bookshelf"
+    },
+    {
+      "n": 5,
+      "speaker": "ivy",
+      "riddle": "Every suspect leaves a track. Check the shoes, then hurry back!",
+      "hint": "Look where the shoes are kept.",
+      "spot": "Shoe area or entryway"
+    },
+    {
+      "n": 6,
+      "speaker": "theo",
+      "riddle": "Even detectives need a rest. Look where pillows do their best.",
+      "hint": "Check a bed or under a pillow.",
+      "spot": "A bed or pillow"
+    },
+    {
+      "n": 7,
+      "speaker": "ivy",
+      "riddle": "A clue is hiding with the toys. Search with care and not much noise!",
+      "hint": "Peek around the toys.",
+      "spot": "Toy box or playroom"
+    },
+    {
+      "n": 8,
+      "speaker": "theo",
+      "riddle": "Round and round the clothes all go. Check the washer, high or low.",
+      "hint": "Where does laundry get washed?",
+      "spot": "Washer or laundry area"
+    },
+    {
+      "n": 9,
+      "speaker": "ivy",
+      "riddle": "Coats and jackets hang in a line. Check the closet, the clue is fine!",
+      "hint": "Open the coat closet.",
+      "spot": "Coat closet"
+    },
+    {
+      "n": 10,
+      "speaker": "theo",
+      "riddle": "Super sleuths, you've cracked the case! Crawl down low where the chairs all meet. The treasure waits beneath your feet!",
+      "hint": "Look under the table!",
+      "spot": "Under the kitchen or dining table",
+      "final": true
+    }
   ],
   "found": [
     "Case cracked! Nice work, detectives!",
@@ -98,19 +175,71 @@
       "Your first clue is in your hands..."
     ],
     "storyCall": "The case is open. Good luck, detectives!",
-    "storyAside": { "speaker": "theo", "text": "Keep your eyes sharp. Clues love to hide in plain sight!" },
+    "storyAside": {
+      "speaker": "theo",
+      "text": "Keep your eyes sharp. Clues love to hide in plain sight!"
+    },
     "belongsLabel": "Lead detective:",
-    "startCard": { "speaker": "ivy", "title": "Case Open!", "text": "Detectives, the treasure is missing! Follow the clues, look closely, and crack the case!" },
-    "endCard": { "title": "Case Closed!", "sub": "Treasure Found!", "art": "img/celebrate.webp" },
-    "whatToPrint": ["Case file story page", "Clue cards (2 pages)", "Junior Detective certificate", "Blank clue cards (optional)"],
+    "startCard": {
+      "speaker": "ivy",
+      "title": "Case Open!",
+      "text": "Detectives, the treasure is missing! Follow the clues, look closely, and crack the case!"
+    },
+    "endCard": {
+      "title": "Case Closed!",
+      "sub": "Treasure Found!",
+      "art": "img/celebrate.webp"
+    },
+    "whatToPrint": [
+      "Case file story page",
+      "Clue cards (2 pages)",
+      "Junior Detective certificate",
+      "Blank clue cards (optional)"
+    ],
     "parentTip": "Hand out flashlights, even in daylight. Every detective feels more official with one.",
     "tips": [
-      { "title": "Detective gear station", "text": "Let detectives suit up while everyone arrives.", "list": ["Paper badges with their detective name", "Cardboard magnifying glasses", "Small notebooks for writing down clues", "Sunglasses or paper mustaches for disguises"] },
-      { "title": "Set the scene", "list": ["Tape yellow streamers across doorways like crime scene tape", "Play mystery music while they search", "Give the lead detective a title, like Chief Inspector"] },
-      { "title": "Detective snacks", "text": "Save these for after the case is closed.", "list": ["Fingerprint cookies: thumbprint cookies with jam", "Clue mix: popcorn, pretzels and candy", "Secret agent juice: any drink with a fun straw"] },
-      { "title": "Close the case", "text": "When the last clue leads to the treasure, everyone shouts \"Case closed!\" Then open the treasure together and hand out Junior Detective certificates." }
+      {
+        "title": "Detective gear station",
+        "text": "Let detectives suit up while everyone arrives.",
+        "list": [
+          "Paper badges with their detective name",
+          "Cardboard magnifying glasses",
+          "Small notebooks for writing down clues",
+          "Sunglasses or paper mustaches for disguises"
+        ]
+      },
+      {
+        "title": "Set the scene",
+        "list": [
+          "Tape yellow streamers across doorways like crime scene tape",
+          "Play mystery music while they search",
+          "Give the lead detective a title, like Chief Inspector"
+        ]
+      },
+      {
+        "title": "Detective snacks",
+        "text": "Save these for after the case is closed.",
+        "list": [
+          "Fingerprint cookies: thumbprint cookies with jam",
+          "Clue mix: popcorn, pretzels and candy",
+          "Secret agent juice: any drink with a fun straw"
+        ]
+      },
+      {
+        "title": "Close the case",
+        "text": "When the last clue leads to the treasure, everyone shouts \"Case closed!\" Then open the treasure together and hand out Junior Detective certificates."
+      }
     ],
-    "certificate": { "kicker": "Detective Headquarters", "title": "Official Junior Detective", "line": "is hereby named an", "body": "for cracking the Case of the Missing Treasure with sharp eyes and clever thinking.", "signer": "Detective Ivy & Detective Theo", "signerRole": "Senior detectives" },
+    "certificate": {
+      "kicker": "Detective Headquarters",
+      "title": "Official Junior Detective",
+      "line": "is hereby named an",
+      "body": "for cracking the Case of the Missing Treasure with sharp eyes and clever thinking.",
+      "signer": "Detective Ivy & Detective Theo",
+      "signerRole": "Senior detectives"
+    },
     "backLine": "If your detectives loved this case, more mysteries are on the way."
-  }
+  },
+  "accessHash": "ddef52f840f315bc88668645c5cc7482d0e8630f9f3bcb009aad40632cfd3eb8",
+  "etsyUrl": "https://www.etsy.com/shop/ConfettiStoryKits"
 }

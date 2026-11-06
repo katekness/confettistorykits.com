@@ -289,12 +289,38 @@
         h("ul", { style: "padding-left:20px;line-height:1.6" },
           h("li", {}, h("b", {}, "Clue #1: "), "keep in your hand to start"),
           quest.steps.map(s => h("li", {}, h("b", {}, s.final ? "Quest Complete card: " : `Clue #${s.n + 1}: `), customText(s.n) ? "your own spot (custom clue)" : s.spot)))),
-      h("p", { class: "note" }, h("a", { href: `qr.html?q=${questId}`, target: "_blank" }, "Print QR stickers for the clue cards")),
       h("div", { class: "row", style: "margin-top:10px" }, h("button", { class: "btn secondary small", onclick: () => dlg.close() }, "Close")));
     dlg.addEventListener("close", () => dlg.remove());
     document.body.append(dlg); dlg.showModal();
   }
   menuBtn.addEventListener("click", () => { sfx.tap(); quest && openMenu(); });
+
+  /* ---------- Access (kit key from the PDF's QR codes) ---------- */
+  async function sha256(text) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+  async function hasAccess(q) {
+    if (!q.accessHash) return true;
+    if (!(window.crypto && crypto.subtle)) return true; // very old browsers: don't lock anyone out
+    const keyName = `cs:key:${questId}`;
+    for (const k of [params.get("k"), store.get(keyName, null)]) {
+      if (k && (await sha256(k)) === q.accessHash) { store.set(keyName, k); return true; }
+    }
+    return false;
+  }
+  function renderLocked(q) {
+    voiceBtn.hidden = true; menuBtn.hidden = true;
+    view.replaceChildren(h("section", { class: "screen" },
+      h("img", { class: "title-art", src: asset(q.titleArt), alt: q.title }),
+      h("div", { class: "card panel", style: "text-align:center" },
+        h("h2", {}, "This Quest Master comes with the kit"),
+        h("p", { style: "line-height:1.55;margin:0 0 6px" }, "Already have it? Scan any QR code on your printed kit and the adventure opens right up."),
+        h("p", { class: "note" }, "Your phone remembers the kit after the first scan.")),
+      h("div", { class: "actions" },
+        h("a", { class: "btn", href: q.etsyUrl || "https://www.etsy.com/shop/ConfettiStoryKits" }, "Get this kit on Etsy"),
+        h("a", { class: "btn secondary small", href: "../" }, "See all story kits"))));
+  }
 
   /* ---------- Render ---------- */
   function render() {
@@ -317,8 +343,9 @@
 
   fetch(base + "quest.json", { cache: "no-cache" })
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(q => {
+    .then(async q => {
       quest = q;
+      if (!(await hasAccess(q))) { applyTheme(q.theme); document.title = q.title; history.replaceState(null, "", `?q=${questId}`); renderLocked(q); return; }
       document.title = `${q.title} | Quest Master`;
       applyTheme(q.theme);
       setVoice(voiceOn);
@@ -326,7 +353,7 @@
       if (cParam === "end" || (jumpTo && q.steps.some(s => s.n === jumpTo))) {
         state.step = cParam === "end" ? "done" : jumpTo; save();
       }
-      if (cParam) history.replaceState(null, "", `?q=${questId}`);
+      if (cParam || params.get("k")) history.replaceState(null, "", `?q=${questId}`);
       render();
     })
     .catch(() => {

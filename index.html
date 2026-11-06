@@ -18,7 +18,7 @@
     <header class="hero">
       <img class="logo" src="assets/img/logo.webp" alt="Confetti Story Kits">
       <p class="tag">Where crafting meets storytelling</p>
-      <p class="sub">Print the clues and hide them around the house. Your phone becomes the Quest Master: it tells the story, reads each riddle, gives hints when someone's stuck, and throws the confetti at the finish.</p>
+      <p class="sub">Printable story adventures you set up in minutes. Print the clues and hide them around the house. Your phone becomes the Quest Master: it tells the story, reads each riddle, gives hints when someone's stuck, and throws the confetti at the finish.</p>
     </header>
 
     <h2 class="section-title">Story Kits</h2>
@@ -27,7 +27,7 @@
     <h2 class="section-title">How it works</h2>
     <section class="how">
       <div class="card step"><div class="num">1</div><h3>Print &amp; hide</h3><p>Print the clue cards and tuck them around the house using the hiding spot guide.</p></div>
-      <div class="card step"><div class="num">2</div><h3>Open the Quest Master</h3><p>Add the birthday kid's name. The story is about them now.</p></div>
+      <div class="card step"><div class="num">2</div><h3>Scan to start</h3><p>Every kit has a QR code that opens its Quest Master. Add your kid's name and the story is about them now.</p></div>
       <div class="card step"><div class="num">3</div><h3>Let them hunt</h3><p>The phone reads each clue out loud. Kids run, search, shout, and find the treasure.</p></div>
     </section>
   </main>
@@ -53,8 +53,8 @@
           card.append(el("h3", null, q.title), el("p", null, q.tagline));
           if (q.status === "live") {
             const a = el("div", "actions");
-            const play = el("a", "btn small", "Open Quest Master"); play.href = `play/?q=${q.id}`;
-            a.append(play); card.append(a);
+            const buy = el("a", "btn small", "Get it on Etsy"); buy.href = q.etsyUrl || "https://www.etsy.com/shop/ConfettiStoryKits";
+            buy.target = "_blank"; buy.rel = "noopener"; a.append(buy); card.append(a);
           } else card.append(el("span", "pill", "In the workshop"));
           grid.append(card);
         }
