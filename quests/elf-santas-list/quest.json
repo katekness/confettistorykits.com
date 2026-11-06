@@ -1,0 +1,272 @@
+{
+  "id": "elf-santas-list",
+  "kitNumber": 3,
+  "title": "The Elf Who Lost Santa's List",
+  "tagline": "A North Pole wind scattered Santa's list. Find every page before Christmas Eve!",
+  "ages": "4-8",
+  "status": "live",
+  "cover": "img/duo.webp",
+  "titleArt": "img/title.webp",
+  "finalButton": "We found the last page! 🎄",
+  "theme": {
+    "primary": "#2f6b3f",
+    "accent": "#b3243a",
+    "soft": "#f6efe3",
+    "gold": "#d9a441",
+    "bg": "linear-gradient(165deg, #fbf6ec 0%, #f3ecdc 55%, #e5eee1 100%)",
+    "confetti": [
+      "#b3243a",
+      "#2f6b3f",
+      "#d9a441",
+      "#ffffff",
+      "#9cc3d5",
+      "#e8828f"
+    ]
+  },
+  "characters": {
+    "elf": {
+      "name": "Juniper the Elf",
+      "img": "img/elf-body.webp",
+      "avatar": "img/elf-face.webp",
+      "voice": {
+        "pitch": 1.25,
+        "rate": 1.0
+      }
+    },
+    "pip": {
+      "name": "Pip the Reindeer",
+      "img": "img/pip-body.webp",
+      "avatar": "img/pip-face.webp",
+      "voice": {
+        "pitch": 1.1,
+        "rate": 0.96
+      }
+    }
+  },
+  "setup": {
+    "nameLabel": "Santa's special helper",
+    "namePlaceholder": "e.g. Mia",
+    "defaultName": "Santa's special helper",
+    "checklist": [
+      "Print and cut the list pages",
+      "Hide pages #2 through #10 using the hiding spot guide",
+      "Put the List Complete card under the Christmas tree (add a small treat or gift if you like)",
+      "Keep page #1 in your hand to start"
+    ]
+  },
+  "intro": {
+    "speaker": "elf",
+    "art": "img/treasure.webp",
+    "lines": [
+      "Oh, thank goodness you're here! I'm Juniper, and I keep Santa's list.",
+      "I was carrying it to the workshop when a big gust of North Pole wind blew the pages right out of my hands... and all over this house!",
+      "Santa needs the whole list by Christmas Eve. {name}, will you help me and Pip find every page?",
+      "Here's the first one. Let's go!"
+    ],
+    "button": "Start the page hunt!"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "speaker": "elf",
+      "riddle": "Oh no, the pages flew away! Look where it's chilly, cold all day.",
+      "hint": "Brrr! Try the fridge.",
+      "spot": "Inside or near the refrigerator"
+    },
+    {
+      "n": 2,
+      "speaker": "pip",
+      "riddle": "One page floated way up high, where the stockings hang nearby.",
+      "hint": "Where do your Christmas stockings hang?",
+      "spot": "Stockings or fireplace (or a window ledge)"
+    },
+    {
+      "n": 3,
+      "speaker": "elf",
+      "riddle": "Even elves wash up each day. Check the sink, a page blew that way!",
+      "hint": "Where do you wash your hands?",
+      "spot": "Bathroom sink"
+    },
+    {
+      "n": 4,
+      "speaker": "pip",
+      "riddle": "Snuggle time is almost here. Check the couch, the page is near!",
+      "hint": "Peek between the couch cushions.",
+      "spot": "Couch cushions"
+    },
+    {
+      "n": 5,
+      "speaker": "elf",
+      "riddle": "Santa loves a story too. Look where books are lined up for you.",
+      "hint": "Check the bookshelf.",
+      "spot": "Books or a bookshelf"
+    },
+    {
+      "n": 6,
+      "speaker": "pip",
+      "riddle": "Sugarplums dance in sleepy heads. Look for a page tucked in the beds!",
+      "hint": "Check a bed or under a pillow.",
+      "spot": "A bed or pillow"
+    },
+    {
+      "n": 7,
+      "speaker": "elf",
+      "riddle": "Snowy boots go by the door. Check the shoes for one page more!",
+      "hint": "Look where the shoes and boots are kept.",
+      "spot": "Shoes or boots by the door"
+    },
+    {
+      "n": 8,
+      "speaker": "pip",
+      "riddle": "The workshop makes a lot of toys. Check the toy box, girls and boys!",
+      "hint": "Peek around the toys.",
+      "spot": "Toy box or playroom"
+    },
+    {
+      "n": 9,
+      "speaker": "elf",
+      "riddle": "Cookies for Santa, milk in a cup. Look where the spoons are all stacked up!",
+      "hint": "Check the spoon drawer in the kitchen.",
+      "spot": "Kitchen utensil drawer or cookie jar"
+    },
+    {
+      "n": 10,
+      "speaker": "pip",
+      "riddle": "One last page and then we're done! Look under the tree for the very last one!",
+      "hint": "Where do the presents go?",
+      "spot": "Under the Christmas tree",
+      "final": true
+    }
+  ],
+  "found": [
+    "You found a page! Juniper is so relieved!",
+    "Another page saved for Santa!",
+    "Jingle, jingle, great job!",
+    "The list is coming together!",
+    "Pip is doing a happy hop!"
+  ],
+  "finale": {
+    "art": "img/duo.webp",
+    "artAlt": "Juniper the Elf and Pip the Reindeer cheering with Santa's list",
+    "title": "Santa's List Is Saved!",
+    "lines": [
+      "You found every single page! Santa's list is complete.",
+      "Thank you, {name}. You're officially a North Pole helper!"
+    ],
+    "badge": "North Pole Helper"
+  },
+  "print": {
+    "kitLabel": "Story Kit #3",
+    "subtitle": "A printable Christmas page hunt where kids find the pieces of Santa's list before Christmas Eve.",
+    "coverArt": "img/duo.webp",
+    "coverFeatures": [
+      "Letter from Juniper the Elf",
+      "10 clue cards styled as Santa's torn list pages",
+      "Quest Master on your phone: reads the clues, gives hints, throws the confetti",
+      "Blank pages for your own hiding spots",
+      "North Pole Helper certificate"
+    ],
+    "storyStyle": "letter",
+    "storyPaper": "img/letter.webp",
+    "cardPaper": "img/listpage-wide.webp",
+    "decor": [
+      "img/snowflake.webp",
+      "img/peppermint.webp",
+      "img/candycane.webp",
+      "img/gift.webp"
+    ],
+    "wash": [
+      "#fbf6ec",
+      "#f3ecdc",
+      "#e5eee1"
+    ],
+    "storyTitle": "A Letter from the North Pole",
+    "storyLines": [
+      "Dear helpers,",
+      "",
+      "It's Juniper, Santa's list-keeper elf. I have a teeny, tiny problem.",
+      "",
+      "I was carrying Santa's list to the workshop when a gust of North Pole wind blew the pages right out of my mittens. They landed all over your house!",
+      "",
+      "Santa needs every page by Christmas Eve. Pip the reindeer and I can't do it without you.",
+      "",
+      "Follow the clues. Each page you find leads to the next one.",
+      "",
+      "Your first page is in your hands...",
+      "",
+      "Jingle bells and thank you,",
+      "Juniper"
+    ],
+    "storyCall": "Let the page hunt begin!",
+    "storyAside": {
+      "speaker": "pip",
+      "text": "Hurry, Christmas Eve is coming!"
+    },
+    "belongsLabel": "Santa's special helper:",
+    "startCard": {
+      "speaker": "elf",
+      "title": "Help! The List Is Lost!",
+      "text": "A North Pole wind blew Santa's list away! Help me find every page before Christmas Eve!"
+    },
+    "endCard": {
+      "title": "List Complete!",
+      "sub": "Santa's List Saved!",
+      "art": "img/duo.webp"
+    },
+    "whatToPrint": [
+      "Letter from Juniper",
+      "List page clue cards (2 pages)",
+      "North Pole Helper certificate",
+      "Blank list pages (optional)"
+    ],
+    "parentTip": "Play it on Christmas Eve morning or the first day of winter break. Turn on the tree lights and some Christmas music before you start.",
+    "tips": [
+      {
+        "title": "Elf workshop craft station",
+        "text": "Let helpers make their North Pole gear while everyone gathers.",
+        "list": [
+          "Paper elf hats with a bell or pom-pom",
+          "Paper chains to count down the pages",
+          "Reindeer antler headbands from brown paper strips"
+        ]
+      },
+      {
+        "title": "Set the scene",
+        "list": [
+          "Christmas music and tree lights only",
+          "Tape a \"North Pole Mail\" sign on the front door",
+          "Give the lead helper a title, like Head Elf"
+        ]
+      },
+      {
+        "title": "North Pole snacks",
+        "text": "Save these for after the list is saved.",
+        "list": [
+          "Hot cocoa with mini marshmallows",
+          "Reindeer food: snack mix with pretzels and chocolate candies",
+          "Candy cane quills for writing Santa a note"
+        ]
+      },
+      {
+        "title": "Save Christmas",
+        "text": "When the last page turns up under the tree, read the whole list together. Then each helper writes one wish on a blank page to send to Santa."
+      }
+    ],
+    "certificate": {
+      "kicker": "North Pole Headquarters",
+      "title": "Official North Pole Helper",
+      "line": "is hereby named an",
+      "body": "for finding every missing page of Santa's list just in time for Christmas.",
+      "signer": "Juniper the Elf & Pip the Reindeer",
+      "signerRole": "Santa's helpers"
+    },
+    "backLine": "If your helpers loved this adventure, more holiday quests are on the way.",
+    "tint": [
+      "#fbf3e6",
+      "#eef3e8",
+      "#e3d3b8"
+    ]
+  },
+  "accessHash": "9dee27f57cdfa967fb3cfae7081de9eb4150b5a4566d240f29f30809da3e985b",
+  "etsyUrl": "https://www.etsy.com/shop/ConfettiStoryKits"
+}

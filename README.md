@@ -7,9 +7,12 @@ Static site, hosted free on GitHub Pages. No build step, no accounts, no trackin
 ## Structure
 
 ```
-index.html              Home page (reads quests/index.json to list kits)
-play/index.html         The Quest Master (one engine for every kit)
-play/qr.html            Printable QR stickers for a kit's clue cards
+index.html              Home page (generated)
+kits/<id>/index.html    One page per kit (generated)
+faq/index.html          FAQ with structured data (generated)
+sitemap.xml, robots.txt, llms.txt   Search + AI discovery files (generated)
+tools/build_site.py     Generates all of the above from quests/*.json
+play/index.html         The Quest Master (one engine; opens only with a kit key from the PDF)
 assets/css/site.css     Shared styles
 assets/js/engine.js     Quest engine
 assets/img/             Brand art (logo, background, favicon, share image)
@@ -34,6 +37,7 @@ quests/<id>/img/        That kit's art
    - `theme`: four colors that re-skin the buttons and confetti
    - `{name}` anywhere in text is replaced with the child's name
 4. In `quests/index.json`, set that kit's `status` to `"live"`.
+5. Run `python3 tools/build_site.py` to regenerate the homepage, kit page, sitemap and llms.txt.
 
 No code changes needed.
 

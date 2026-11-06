@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /play/
+Allow: /
+
+Sitemap: https://confettistorykits.com/sitemap.xml

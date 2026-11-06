@@ -121,7 +121,7 @@
     const dpr = window.devicePixelRatio || 1;
     canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr; c2d.setTransform(dpr, 0, 0, dpr, 0, 0);
     const t = quest?.theme || {};
-    const colors = [t.accent || "#f0468e", t.primary || "#8e3fa8", t.gold || "#f4c542", "#5fc8e8", "#ff9ec7", "#b48cf0"];
+    const colors = t.confetti || [t.accent || "#f0468e", t.primary || "#8e3fa8", t.gold || "#f4c542", "#5fc8e8", "#ff9ec7", "#b48cf0"];
     for (let i = 0; i < count; i++) {
       bits.push({
         x: innerWidth / 2 + (Math.random() - .5) * innerWidth * .4, y: innerHeight * .35,
@@ -339,6 +339,7 @@
     if (t.accent) r.setProperty("--pink", t.accent);
     if (t.soft) r.setProperty("--soft", t.soft);
     if (t.gold) r.setProperty("--gold", t.gold);
+    if (t.bg) document.body.style.background = t.bg;
   }
 
   fetch(base + "quest.json", { cache: "no-cache" })
