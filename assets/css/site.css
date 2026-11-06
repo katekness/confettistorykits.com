@@ -208,3 +208,7 @@ footer a { color: var(--purple); }
 .signup form.sent input, .signup form.sent button { opacity: .5; pointer-events: none; }
 .sr, .hp { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 @media (max-width: 720px) { .signup { grid-template-columns: 1fr; } .signup form { grid-template-columns: 1fr; } }
+
+.legal .panel h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.legal .panel p { margin: 0 0 10px; }
+.legal .panel p:last-child { margin-bottom: 0; }
