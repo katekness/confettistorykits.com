@@ -186,13 +186,12 @@
     const i = quest.intro;
     const text = i.lines.map(fill);
     const bubble = speakerBlock(i.speaker, h("div", {}, text.map(t => h("p", { style: "margin:0 0 10px" }, t))));
-    setTimeout(() => say(text.join(" "), i.speaker), 350);
     return h("section", { class: "screen" },
       i.art ? h("img", { class: "title-art", src: asset(i.art), alt: "" }) : null,
       bubble,
       h("div", { class: "actions" },
         h("button", { class: "btn", onclick: () => { sfx.chime(); go(1); } }, i.button),
-        h("button", { class: "btn secondary small", onclick: () => say(text.join(" "), i.speaker) }, "🔊 Read it again")));
+        h("button", { class: "btn secondary small", onclick: () => say(text.join(" "), i.speaker) }, "🔊 Read it aloud")));
   }
 
   function renderStep(n) {
@@ -201,7 +200,6 @@
     const hintEl = h("p", { class: "hint", id: "hint" }, "💡 " + step.hint);
     const right = n % 2 === 0;
     const intro = n === 1 ? `Read Clue #1 together, ${state.name || "brave explorers"}!` : `Clue #${n}! Let's read it together.`;
-    setTimeout(() => say(`${intro} ${step.riddle}`, step.speaker), 350);
 
     const next = () => {
       sfx.chime(); burst(60);
@@ -218,7 +216,7 @@
         h("p", { class: "riddle" }, step.riddle),
         hintEl),
       h("div", { class: "row" },
-        h("button", { class: "btn secondary small", onclick: () => say(step.riddle, step.speaker) }, "🔊 Read again"),
+        h("button", { class: "btn secondary small", onclick: () => say(step.riddle, step.speaker) }, "🔊 Read aloud"),
         h("button", { class: "btn secondary small", onclick: () => { sfx.hint(); hintEl.classList.add("show"); say(step.hint, step.speaker); } }, "💡 Hint")),
       h("div", { class: "spacer" }),
       h("div", { class: "actions" },
@@ -230,7 +228,6 @@
     const f = quest.finale;
     const lines = f.lines.map(fill);
     setTimeout(() => { sfx.fanfare(); burst(220); setTimeout(() => burst(140), 900); }, 200);
-    setTimeout(() => say(lines.join(" "), quest.intro.speaker), 1200);
     return h("section", { class: "screen" },
       h("h1", { style: "text-align:center;font-size:2.2rem;color:var(--pink)" }, f.title),
       h("img", { class: "finale-art", src: asset(f.art), alt: "The knight and princess celebrating with the cake" }),
