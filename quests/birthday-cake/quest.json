@@ -141,7 +141,8 @@
       "You did it! The birthday treasure has been found!",
       "Happy birthday, {name}! Now let's celebrate!"
     ],
-    "badge": "Royal Birthday Explorer"
+    "badge": "Royal Birthday Explorer",
+    "artAlt": "The knight and princess celebrating with the cake"
   },
   "print": {
     "kitLabel": "Story Kit #1",
@@ -233,7 +234,11 @@
       "title": "Royal Birthday Explorer",
       "line": "is hereby named an official",
       "body": "for bravely solving every clue and finding the hidden birthday cake.",
-      "signer": "The Knight & The Princess"
-    }
-  }
+      "signer": "The Knight & The Princess",
+      "kicker": "Certificate of Bravery",
+      "signerRole": "Royal witnesses"
+    },
+    "coverArt": "img/chest.webp"
+  },
+  "finalButton": "We found the cake! 🎂"
 }

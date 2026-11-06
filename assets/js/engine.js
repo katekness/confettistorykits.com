@@ -253,7 +253,7 @@
         h("button", { class: "btn secondary small", onclick: () => { sfx.hint(); hintEl.classList.add("show"); say(hint, step.speaker); } }, "💡 Hint")),
       h("div", { class: "spacer" }),
       h("div", { class: "actions" },
-        h("button", { class: "btn", onclick: next }, step.final ? "We found the cake! 🎂" : `We found Clue #${n + 1}!`),
+        h("button", { class: "btn", onclick: next }, step.final ? (quest.finalButton || "We found it! 🎉") : `We found Clue #${n + 1}!`),
         n > 1 ? h("button", { class: "btn secondary small", onclick: () => go(n - 1) }, "← Back a clue") : null));
   }
 
@@ -263,7 +263,7 @@
     setTimeout(() => { sfx.fanfare(); burst(220); setTimeout(() => burst(140), 900); }, 200);
     return h("section", { class: "screen" },
       h("h1", { style: "text-align:center;font-size:2.2rem;color:var(--pink)" }, f.title),
-      h("img", { class: "finale-art", src: asset(f.art), alt: "The knight and princess celebrating with the cake" }),
+      h("img", { class: "finale-art", src: asset(f.art), alt: f.artAlt || "Celebration" }),
       h("div", { class: "card panel", style: "text-align:center" }, lines.map(t => h("p", { style: "margin:0 0 8px;font-size:1.15rem" }, t))),
       f.badge ? h("p", { class: "badge-out" }, "🏅 " + (state.name || "Our explorer"), h("small", {}, `is now an official ${f.badge}!`)) : null,
       h("div", { class: "actions" },
