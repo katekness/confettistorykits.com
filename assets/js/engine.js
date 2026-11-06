@@ -44,6 +44,11 @@
   }
   const fill = (s) => String(s).replaceAll("{name}", state.name || quest.setup.defaultName);
   const asset = (p) => base + p;
+  const customText = (n) => ((state.custom || {})[n] || "").trim();
+  const riddleFor = (step) => customText(step.n) || step.riddle;
+  const hintFor = (step) => customText(step.n)
+    ? (step.final ? "Where would the treasure be hiding? Look high and low!" : `Think about where Clue #${step.n + 1} could be hiding. Look high and low!`)
+    : step.hint;
 
   /* ---------- Sound (Web Audio, no files) ---------- */
   let ctx;
@@ -178,8 +183,35 @@
         h("ul", { class: "checklist" }, s.checklist.map((item, i) =>
           h("li", {}, h("label", {}, h("input", { type: "checkbox", id: "chk" + i }), h("span", {}, item))))),
         h("p", { class: "note" }, "Keep your phone in your hand. You read the story, the kids do the hunting.")),
+      customPanel(),
       h("div", { class: "actions" },
         h("button", { class: "btn", onclick: () => { audio(); sfx.chime(); state.name = input.value.trim(); go("intro"); } }, "Start the story ✨")));
+  }
+
+  function customPanel() {
+    state.custom = state.custom || {};
+    const count = () => Object.values(state.custom).filter(v => v && v.trim()).length;
+    const status = h("p", { class: "note", style: "margin-top:0" });
+    const refresh = () => { status.textContent = count() ? `${count()} custom clue${count() > 1 ? "s" : ""} saved on this phone.` : "Using the original clues."; };
+    const fields = quest.steps.map(st => {
+      const ta = h("textarea", { class: "text", rows: "3", placeholder: st.riddle });
+      ta.value = customText(st.n);
+      ta.addEventListener("input", () => { state.custom[st.n] = ta.value; save(); refresh(); });
+      return h("div", { class: "custom-field" },
+        h("label", { class: "field" }, st.final ? "Final clue " : `Clue #${st.n} `, h("span", { class: "spot" }, st.final ? "leads to the treasure" : `leads to Clue #${st.n + 1}`)),
+        ta);
+    });
+    refresh();
+    return h("div", { class: "card panel" },
+      h("h2", {}, "Using your own hiding spots?"),
+      h("p", { class: "note", style: "margin:0 0 10px" }, "Wrote a riddle on a blank card? Type the same words here so the Quest Master reads your version. Leave a box empty to keep the original."),
+      status,
+      h("details", { class: "custom" },
+        h("summary", {}, "Edit clues"),
+        fields,
+        h("button", { class: "btn secondary small", style: "margin-top:12px", onclick: () => {
+          state.custom = {}; save(); fields.forEach(f => { f.querySelector("textarea").value = ""; }); refresh();
+        } }, "Reset to original clues")));
   }
 
   function renderIntro() {
@@ -197,7 +229,8 @@
   function renderStep(n) {
     const step = quest.steps.find(s => s.n === n);
     if (!step) { go("setup"); return h("div"); }
-    const hintEl = h("p", { class: "hint", id: "hint" }, "💡 " + step.hint);
+    const riddle = riddleFor(step), hint = hintFor(step);
+    const hintEl = h("p", { class: "hint", id: "hint" }, "💡 " + hint);
     const right = n % 2 === 0;
     const intro = n === 1 ? `Read Clue #1 together, ${state.name || "brave explorers"}!` : `Clue #${n}! Let's read it together.`;
 
@@ -213,11 +246,11 @@
       speakerBlock(step.speaker, intro, right),
       h("div", { class: "clue" },
         h("span", { class: "tagline" }, step.final ? "Final Clue" : `Clue #${n}`),
-        h("p", { class: "riddle" }, step.riddle),
+        h("p", { class: "riddle" }, riddle),
         hintEl),
       h("div", { class: "row" },
-        h("button", { class: "btn secondary small", onclick: () => say(step.riddle, step.speaker) }, "🔊 Read aloud"),
-        h("button", { class: "btn secondary small", onclick: () => { sfx.hint(); hintEl.classList.add("show"); say(step.hint, step.speaker); } }, "💡 Hint")),
+        h("button", { class: "btn secondary small", onclick: () => say(riddle, step.speaker) }, "🔊 Read aloud"),
+        h("button", { class: "btn secondary small", onclick: () => { sfx.hint(); hintEl.classList.add("show"); say(hint, step.speaker); } }, "💡 Hint")),
       h("div", { class: "spacer" }),
       h("div", { class: "actions" },
         h("button", { class: "btn", onclick: next }, step.final ? "We found the cake! 🎂" : `We found Clue #${n + 1}!`),
@@ -251,11 +284,11 @@
       h("label", { class: "field" }, "Jump to"), jump,
       h("div", { class: "row", style: "margin:14px 0" },
         h("button", { class: "btn small", onclick: () => { const v = jump.value; dlg.close(); go(isNaN(v) ? v : +v); } }, "Go"),
-        h("button", { class: "btn secondary small", onclick: () => { dlg.close(); state = { name: state.name, step: "setup" }; go("setup"); } }, "Restart")),
+        h("button", { class: "btn secondary small", onclick: () => { dlg.close(); state = { name: state.name, custom: state.custom, step: "setup" }; go("setup"); } }, "Restart")),
       h("details", {}, h("summary", { style: "cursor:pointer;font-weight:700" }, "Hiding spot guide"),
         h("ul", { style: "padding-left:20px;line-height:1.6" },
           h("li", {}, h("b", {}, "Clue #1: "), "keep in your hand to start"),
-          quest.steps.map(s => h("li", {}, h("b", {}, s.final ? "Quest Complete card: " : `Clue #${s.n + 1}: `), s.spot)))),
+          quest.steps.map(s => h("li", {}, h("b", {}, s.final ? "Quest Complete card: " : `Clue #${s.n + 1}: `), customText(s.n) ? "your own spot (custom clue)" : s.spot)))),
       h("p", { class: "note" }, h("a", { href: `qr.html?q=${questId}`, target: "_blank" }, "Print QR stickers for the clue cards")),
       h("div", { class: "row", style: "margin-top:10px" }, h("button", { class: "btn secondary small", onclick: () => dlg.close() }, "Close")));
     dlg.addEventListener("close", () => dlg.remove());

@@ -96,11 +96,11 @@ body.play { overflow-x: hidden; }
 .panel { padding: 20px; }
 .panel h2 { font-size: 1.35rem; margin-bottom: 10px; }
 label.field { display: block; font: 600 .95rem var(--display); color: var(--plum); margin-bottom: 6px; }
-input.text {
+input.text, textarea.text {
   width: 100%; font: 600 1.15rem var(--body); padding: 14px 16px; border-radius: 14px;
   border: 2px solid #e6d2f1; background: #fff; color: var(--ink);
 }
-input.text:focus { outline: none; border-color: var(--pink); }
+input.text:focus, textarea.text:focus { outline: none; border-color: var(--pink); }
 .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .checklist label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; line-height: 1.4; }
 .checklist input { width: 22px; height: 22px; accent-color: var(--pink); flex: none; margin-top: 1px; }
@@ -167,3 +167,9 @@ canvas#confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* custom clues */
+textarea.text { resize: vertical; font: 600 1rem/1.4 var(--body); min-height: 74px; }
+details.custom summary { cursor: pointer; font: 600 1rem var(--display); color: var(--pink); padding: 6px 0; }
+.custom-field { margin-top: 12px; }
+.custom-field .spot { font: 600 .8rem var(--body); color: var(--muted); }

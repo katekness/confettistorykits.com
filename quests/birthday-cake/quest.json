@@ -150,8 +150,8 @@
       "Magical story introduction",
       "10 ready-to-use clue cards",
       "Quest Master on your phone: reads the clues, gives hints, throws the confetti",
-      "Explorer certificate",
-      "About 5 minute setup"
+      "Blank cards for your own hiding spots",
+      "Explorer certificate"
     ],
     "seal": "img/badge.webp",
     "storyTitle": "The Birthday Cake Quest",
@@ -229,7 +229,6 @@
         "text": "When the last clue leads to the cake, declare it loudly: \"Quest complete! The birthday treasure has been found!\" Then hand out certificates and cut the cake."
       }
     ],
-    "canvaTemplate": "https://www.canva.com/design/DAHDFxasSvU/flNon5Xh5Arqq6fS84HU4w/view?utm_content=DAHDFxasSvU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
     "certificate": {
       "title": "Royal Birthday Explorer",
       "line": "is hereby named an official",
