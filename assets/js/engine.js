@@ -256,7 +256,9 @@
         h("button", { class: "btn small", onclick: () => { const v = jump.value; dlg.close(); go(isNaN(v) ? v : +v); } }, "Go"),
         h("button", { class: "btn secondary small", onclick: () => { dlg.close(); state = { name: state.name, step: "setup" }; go("setup"); } }, "Restart")),
       h("details", {}, h("summary", { style: "cursor:pointer;font-weight:700" }, "Hiding spot guide"),
-        h("ol", { style: "padding-left:20px;line-height:1.6" }, quest.steps.map(s => h("li", {}, s.spot)))),
+        h("ul", { style: "padding-left:20px;line-height:1.6" },
+          h("li", {}, h("b", {}, "Clue #1: "), "keep in your hand to start"),
+          quest.steps.map(s => h("li", {}, h("b", {}, s.final ? "Quest Complete card: " : `Clue #${s.n + 1}: `), s.spot)))),
       h("p", { class: "note" }, h("a", { href: `qr.html?q=${questId}`, target: "_blank" }, "Print QR stickers for the clue cards")),
       h("div", { class: "row", style: "margin-top:10px" }, h("button", { class: "btn secondary small", onclick: () => dlg.close() }, "Close")));
     dlg.addEventListener("close", () => dlg.remove());

@@ -18,7 +18,8 @@ html, body { margin: 0; }
 body {
   font-family: var(--body);
   color: var(--ink);
-  background: #fbeaf6 url("../img/bg.webp") center / cover fixed;
+  background: linear-gradient(165deg, #fde7f3 0%, #f6e3fb 45%, #e9ddfb 100%) fixed;
+  background-color: #f6e3fb;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
@@ -78,7 +79,7 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0; color: va
 footer { text-align: center; padding: 40px 16px; color: var(--muted); font-size: .9rem; }
 
 /* ---------- Play ---------- */
-body.play { background-attachment: scroll; overflow-x: hidden; }
+body.play { overflow-x: hidden; }
 .app { max-width: 560px; margin: 0 auto; min-height: 100dvh; padding: 14px 16px 28px; display: flex; flex-direction: column; }
 .topbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; }
 .topbar .logo-sm { height: 34px; width: auto; }
