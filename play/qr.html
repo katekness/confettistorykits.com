@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>QR Stickers | Confetti Story Kits</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
   <link rel="stylesheet" href="../assets/css/site.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="../assets/js/vendor/qrcode.js"></script>
 </head>
 <body style="background:#fff">
   <div class="wrap" style="padding:24px 16px">
@@ -31,7 +29,9 @@
           const box = document.createElement("div"); box.className = "q";
           const label = document.createElement("b"); label.textContent = s.final ? "Final Clue" : `Clue #${s.n}`;
           cell.append(box, label); grid.append(cell);
-          new QRCode(box, { text: `${playUrl}?q=${id}&c=${s.n}`, width: 120, height: 120, colorDark: "#4a2160", correctLevel: QRCode.CorrectLevel.M });
+          const qr = qrcode(0, "M"); qr.addData(`${playUrl}?q=${id}&c=${s.n}`); qr.make();
+          box.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+          box.firstChild.style.width = "120px"; box.firstChild.style.height = "120px";
         });
       });
     })();

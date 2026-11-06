@@ -292,10 +292,11 @@
       document.title = `${q.title} | Quest Master`;
       applyTheme(q.theme);
       setVoice(voiceOn);
-      if (jumpTo && q.steps.some(s => s.n === jumpTo)) {
-        state.step = jumpTo; save();
-        history.replaceState(null, "", `?q=${questId}`);
+      const cParam = params.get("c");
+      if (cParam === "end" || (jumpTo && q.steps.some(s => s.n === jumpTo))) {
+        state.step = cParam === "end" ? "done" : jumpTo; save();
       }
+      if (cParam) history.replaceState(null, "", `?q=${questId}`);
       render();
     })
     .catch(() => {

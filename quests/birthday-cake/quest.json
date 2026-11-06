@@ -14,8 +14,22 @@
     "gold": "#f4c542"
   },
   "characters": {
-    "princess": { "name": "The Princess", "img": "img/princess.webp", "voice": { "pitch": 1.25, "rate": 0.95 } },
-    "knight": { "name": "The Knight", "img": "img/knight.webp", "voice": { "pitch": 0.9, "rate": 0.98 } }
+    "princess": {
+      "name": "The Princess",
+      "img": "img/princess.webp",
+      "voice": {
+        "pitch": 1.25,
+        "rate": 0.95
+      }
+    },
+    "knight": {
+      "name": "The Knight",
+      "img": "img/knight.webp",
+      "voice": {
+        "pitch": 0.9,
+        "rate": 0.98
+      }
+    }
   },
   "setup": {
     "nameLabel": "Birthday explorer's name",
@@ -41,16 +55,77 @@
     "button": "Let the quest begin!"
   },
   "steps": [
-    { "n": 1, "speaker": "princess", "riddle": "Your quest begins, the search is on! Look where travelers leave their shoes when they come home.", "hint": "Check by the front door, where shoes go.", "spot": "Shoe area or entryway" },
-    { "n": 2, "speaker": "knight", "riddle": "You're off to a start, you're doing great! Look where chilly snacks and cool drinks wait.", "hint": "Brrr! Try the fridge.", "spot": "Inside or near the refrigerator" },
-    { "n": 3, "speaker": "princess", "riddle": "Brave adventurers follow the trail. Look where stories and movies set sail.", "hint": "Where do you watch shows? Check the TV or couch.", "spot": "TV, couch or movie area" },
-    { "n": 4, "speaker": "knight", "riddle": "Through castle halls your quest must flow. Look where splashing water comes and goes.", "hint": "Where do you wash your hands?", "spot": "Bathroom sink" },
-    { "n": 5, "speaker": "princess", "riddle": "Your quest continues, don't delay! Look near the place where explorers play.", "hint": "Peek around the toys.", "spot": "Toy area or playroom" },
-    { "n": 6, "speaker": "knight", "riddle": "The trail grows warm, you're almost there! Look where sleepy heads rest without a care.", "hint": "Check a bed or under a pillow.", "spot": "A bed or pillow" },
-    { "n": 7, "speaker": "princess", "riddle": "Even heroes stop for snacks to eat. Look where forks and spoons all meet.", "hint": "Try the kitchen table or the spoon drawer.", "spot": "Kitchen table or utensil drawer" },
-    { "n": 8, "speaker": "knight", "riddle": "The adventure spins with a splash and swirl. Look where clothes twist, spin, and twirl.", "hint": "Where does laundry get washed?", "spot": "Washer or laundry area" },
-    { "n": 9, "speaker": "knight", "riddle": "Just one more clue, you're almost there! Look where books rest with patient care.", "hint": "Check the bookshelf.", "spot": "Books or a bookshelf" },
-    { "n": 10, "speaker": "princess", "riddle": "You followed the clues with courage and might. The birthday treasure is now in sight! Look where the birthday cake waits in delight.", "hint": "Where would a birthday cake be waiting?", "spot": "Near the birthday cake", "final": true }
+    {
+      "n": 1,
+      "speaker": "princess",
+      "riddle": "Your quest begins, the search is on! Look where travelers leave their shoes when they come home.",
+      "hint": "Check by the front door, where shoes go.",
+      "spot": "Shoe area or entryway"
+    },
+    {
+      "n": 2,
+      "speaker": "knight",
+      "riddle": "You're off to a start, you're doing great! Look where chilly snacks and cool drinks wait.",
+      "hint": "Brrr! Try the fridge.",
+      "spot": "Inside or near the refrigerator"
+    },
+    {
+      "n": 3,
+      "speaker": "princess",
+      "riddle": "Brave adventurers follow the trail. Look where stories and movies set sail.",
+      "hint": "Where do you watch shows? Check the TV or couch.",
+      "spot": "TV, couch or movie area"
+    },
+    {
+      "n": 4,
+      "speaker": "knight",
+      "riddle": "Through castle halls your quest must flow. Look where splashing water comes and goes.",
+      "hint": "Where do you wash your hands?",
+      "spot": "Bathroom sink"
+    },
+    {
+      "n": 5,
+      "speaker": "princess",
+      "riddle": "Your quest continues, don't delay! Look near the place where explorers play.",
+      "hint": "Peek around the toys.",
+      "spot": "Toy area or playroom"
+    },
+    {
+      "n": 6,
+      "speaker": "knight",
+      "riddle": "The trail grows warm, you're almost there! Look where sleepy heads rest without a care.",
+      "hint": "Check a bed or under a pillow.",
+      "spot": "A bed or pillow"
+    },
+    {
+      "n": 7,
+      "speaker": "princess",
+      "riddle": "Even heroes stop for snacks to eat. Look where forks and spoons all meet.",
+      "hint": "Try the kitchen table or the spoon drawer.",
+      "spot": "Kitchen table or utensil drawer"
+    },
+    {
+      "n": 8,
+      "speaker": "knight",
+      "riddle": "The adventure spins with a splash and swirl. Look where clothes twist, spin, and twirl.",
+      "hint": "Where does laundry get washed?",
+      "spot": "Washer or laundry area"
+    },
+    {
+      "n": 9,
+      "speaker": "knight",
+      "riddle": "Just one more clue, you're almost there! Look where books rest with patient care.",
+      "hint": "Check the bookshelf.",
+      "spot": "Books or a bookshelf"
+    },
+    {
+      "n": 10,
+      "speaker": "princess",
+      "riddle": "You followed the clues with courage and might. The birthday treasure is now in sight! Look where the birthday cake waits in delight.",
+      "hint": "Where would a birthday cake be waiting?",
+      "spot": "Near the birthday cake",
+      "final": true
+    }
   ],
   "found": [
     "You found it! Great detective work!",
@@ -67,5 +142,99 @@
       "Happy birthday, {name}! Now let's celebrate!"
     ],
     "badge": "Royal Birthday Explorer"
+  },
+  "print": {
+    "kitLabel": "Story Kit #1",
+    "subtitle": "A printable birthday adventure where kids follow clues to discover the hidden cake.",
+    "coverFeatures": [
+      "Magical story introduction",
+      "10 ready-to-use clue cards",
+      "Quest Master on your phone: reads the clues, gives hints, throws the confetti",
+      "Explorer certificate",
+      "About 5 minute setup"
+    ],
+    "seal": "img/badge.webp",
+    "storyTitle": "The Birthday Cake Quest",
+    "storyArt": "img/banner.webp",
+    "storyLines": [
+      "Today is no ordinary birthday...",
+      "something mysterious has happened in the kingdom.",
+      "",
+      "The birthday cake has vanished!",
+      "",
+      "Somewhere inside this house, a clever hiding place waits to be discovered. But finding it will not be easy.",
+      "",
+      "Only the bravest explorers will be able to solve the clues.",
+      "Each riddle will lead you closer. Each discovery will bring you nearer to the hidden treasure.",
+      "",
+      "Search high. Search low. Follow the clues wherever they go.",
+      "",
+      "And if you are brave enough... you just might discover the hidden birthday cake!",
+      "",
+      "So gather your courage. Your first clue is waiting..."
+    ],
+    "storyCall": "Let the Birthday Cake Quest begin!",
+    "storyAside": {
+      "speaker": "knight",
+      "text": "Hurry! The first clue is already in your hands..."
+    },
+    "startCard": {
+      "speaker": "princess",
+      "title": "A Quest Begins!",
+      "text": "Brave explorer, your quest begins! Follow the clues and search high and low. A birthday treasure is waiting for you!"
+    },
+    "endCard": {
+      "title": "Quest Complete!",
+      "sub": "Cake Found!",
+      "art": "img/celebrate.webp"
+    },
+    "whatToPrint": [
+      "Story page",
+      "Clue cards (2 pages)",
+      "Explorer certificate",
+      "Blank clue cards (optional)"
+    ],
+    "parentTip": "Dim the lights a little and play some quest music. It makes the whole house feel like a castle.",
+    "tips": [
+      {
+        "title": "Create a craft station",
+        "text": "Before the quest begins, let young adventurers make their own royal gear while everyone arrives.",
+        "list": [
+          "Blank party hats",
+          "Paper tubes for wands or swords",
+          "Gem stickers",
+          "Tissue paper and glue sticks"
+        ],
+        "note": "Skip the glitter. Future you will thank you."
+      },
+      {
+        "title": "Set the scene",
+        "list": [
+          "Play quest music while explorers search",
+          "Give the birthday child a title, like Royal Birthday Explorer",
+          "Pretend the house is a castle with secret rooms, and add a small cardboard hidden door"
+        ]
+      },
+      {
+        "title": "Serve knightly snacks",
+        "text": "Save these for after the treasure is found.",
+        "list": [
+          "Magic Potion Punch: butterfly pea tea lemonade",
+          "Royal Wands: pretzel rods dipped in frosting and sprinkles",
+          "Knightly Snacks: cheese cubes, grapes, or popcorn"
+        ]
+      },
+      {
+        "title": "Celebrate the treasure",
+        "text": "When the last clue leads to the cake, declare it loudly: \"Quest complete! The birthday treasure has been found!\" Then hand out certificates and cut the cake."
+      }
+    ],
+    "canvaTemplate": "https://www.canva.com/design/DAHDFxasSvU/flNon5Xh5Arqq6fS84HU4w/view?utm_content=DAHDFxasSvU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview",
+    "certificate": {
+      "title": "Royal Birthday Explorer",
+      "line": "is hereby named an official",
+      "body": "for bravely solving every clue and finding the hidden birthday cake.",
+      "signer": "The Knight & The Princess"
+    }
   }
 }
