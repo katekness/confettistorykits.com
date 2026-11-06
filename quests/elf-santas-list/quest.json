@@ -27,20 +27,12 @@
     "elf": {
       "name": "Juniper the Elf",
       "img": "img/elf-body.webp",
-      "avatar": "img/elf-face.webp",
-      "voice": {
-        "pitch": 1.25,
-        "rate": 1.0
-      }
+      "avatar": "img/elf-face.webp"
     },
     "pip": {
       "name": "Pip the Reindeer",
       "img": "img/pip-body.webp",
-      "avatar": "img/pip-face.webp",
-      "voice": {
-        "pitch": 1.1,
-        "rate": 0.96
-      }
+      "avatar": "img/pip-face.webp"
     }
   },
   "setup": {

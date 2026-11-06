@@ -93,8 +93,8 @@
       speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       const v = pickVoice(); if (v) u.voice = v;
-      const cfg = quest.characters[speakerKey]?.voice || {};
-      u.pitch = cfg.pitch ?? 1.1; u.rate = cfg.rate ?? 0.95;
+      // one neutral reading voice for every kit (character voices may come later as recorded audio)
+      u.pitch = 1; u.rate = 0.95;
       speechSynthesis.speak(u);
     } catch { /* ignore */ }
   }

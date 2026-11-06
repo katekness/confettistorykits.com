@@ -16,19 +16,11 @@
   "characters": {
     "princess": {
       "name": "The Princess",
-      "img": "img/princess.webp",
-      "voice": {
-        "pitch": 1.25,
-        "rate": 0.95
-      }
+      "img": "img/princess.webp"
     },
     "knight": {
       "name": "The Knight",
-      "img": "img/knight.webp",
-      "voice": {
-        "pitch": 0.9,
-        "rate": 0.98
-      }
+      "img": "img/knight.webp"
     }
   },
   "setup": {

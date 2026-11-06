@@ -18,20 +18,12 @@
     "ivy": {
       "name": "Detective Ivy",
       "img": "img/ivy-body.webp",
-      "avatar": "img/ivy-face.webp",
-      "voice": {
-        "pitch": 1.2,
-        "rate": 0.97
-      }
+      "avatar": "img/ivy-face.webp"
     },
     "theo": {
       "name": "Detective Theo",
       "img": "img/theo-body.webp",
-      "avatar": "img/theo-face.webp",
-      "voice": {
-        "pitch": 0.95,
-        "rate": 0.98
-      }
+      "avatar": "img/theo-face.webp"
     }
   },
   "setup": {
