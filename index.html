@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confetti Story Kits | Where crafting meets storytelling</title>
+  <meta name="description" content="Printable story adventures for kids, with a phone Quest Master that reads the story, gives hints and throws the confetti.">
+  <meta name="theme-color" content="#f0468e">
+  <link rel="icon" href="assets/img/favicon.png">
+  <meta property="og:title" content="Confetti Story Kits">
+  <meta property="og:description" content="Print the clues. Your phone runs the story.">
+  <meta property="og:image" content="assets/img/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <img class="logo" src="assets/img/logo.webp" alt="Confetti Story Kits">
+      <p class="tag">Where crafting meets storytelling</p>
+      <p class="sub">Print the clues and hide them around the house. Your phone becomes the Quest Master: it tells the story, reads each riddle, gives hints when someone's stuck, and throws the confetti at the finish.</p>
+    </header>
+
+    <h2 class="section-title">Story Kits</h2>
+    <section class="kits" id="kits" aria-live="polite"></section>
+
+    <h2 class="section-title">How it works</h2>
+    <section class="how">
+      <div class="card step"><div class="num">1</div><h3>Print &amp; hide</h3><p>Print the clue cards and tuck them around the house using the hiding spot guide.</p></div>
+      <div class="card step"><div class="num">2</div><h3>Open the Quest Master</h3><p>Add the birthday kid's name. The story is about them now.</p></div>
+      <div class="card step"><div class="num">3</div><h3>Let them hunt</h3><p>The phone reads each clue out loud. Kids run, search, shout, and find the treasure.</p></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="yr"></span> Confetti Story Kits</p>
+  </footer>
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    (async () => {
+      const grid = document.getElementById("kits");
+      const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+      try {
+        const idx = await (await fetch("quests/index.json", { cache: "no-cache" })).json();
+        for (const item of idx.quests) {
+          let q = item;
+          if (item.status === "live") q = { ...item, ...(await (await fetch(`quests/${item.id}/quest.json`)).json()) };
+          const card = el("article", "card kit" + (q.status === "soon" ? " soon" : ""));
+          const art = el("div", "art");
+          if (q.cover) { const img = el("img"); img.src = `quests/${q.id}/${q.cover}`; img.alt = ""; img.loading = "lazy"; art.append(img); }
+          else art.append(el("span", "emoji", q.emoji || "✨"));
+          card.append(art);
+          card.append(el("span", "meta", q.status === "live" ? `Kit #${q.kitNumber} · Ages ${q.ages}` : "Coming soon"));
+          card.append(el("h3", null, q.title), el("p", null, q.tagline));
+          if (q.status === "live") {
+            const a = el("div", "actions");
+            const play = el("a", "btn small", "Open Quest Master"); play.href = `play/?q=${q.id}`;
+            a.append(play); card.append(a);
+          } else card.append(el("span", "pill", "In the workshop"));
+          grid.append(card);
+        }
+      } catch { grid.append(el("p", null, "Story kits are loading. Try refreshing.")); }
+    })();
+  </script>
+</body>
+</html>

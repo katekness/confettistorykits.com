@@ -1,0 +1,71 @@
+{
+  "id": "birthday-cake",
+  "kitNumber": 1,
+  "title": "The Great Birthday Cake Quest",
+  "tagline": "The birthday cake has vanished. Follow the clues to find it!",
+  "ages": "4-8",
+  "status": "live",
+  "cover": "img/cake-chest.webp",
+  "titleArt": "img/title.webp",
+  "theme": {
+    "primary": "#8e3fa8",
+    "accent": "#f0468e",
+    "soft": "#f3e6fb",
+    "gold": "#f4c542"
+  },
+  "characters": {
+    "princess": { "name": "The Princess", "img": "img/princess.webp", "voice": { "pitch": 1.25, "rate": 0.95 } },
+    "knight": { "name": "The Knight", "img": "img/knight.webp", "voice": { "pitch": 0.9, "rate": 0.98 } }
+  },
+  "setup": {
+    "nameLabel": "Birthday explorer's name",
+    "namePlaceholder": "e.g. Ava",
+    "defaultName": "our birthday explorer",
+    "checklist": [
+      "Print and cut the clue cards",
+      "Hide Clue #2 through #10 using the hiding spot guide",
+      "Put the Quest Complete card by the cake",
+      "Keep Clue #1 in your hand to start"
+    ]
+  },
+  "intro": {
+    "speaker": "knight",
+    "art": "img/banner.webp",
+    "lines": [
+      "Today is no ordinary birthday. Something mysterious has happened in the kingdom!",
+      "{name}'s birthday cake has vanished!",
+      "Somewhere inside this house, a clever hiding place waits to be discovered. But finding it will not be easy.",
+      "Only the bravest explorers can solve the clues. Search high. Search low. Follow the clues wherever they go!",
+      "So gather your courage. Your first clue is waiting..."
+    ],
+    "button": "Let the quest begin!"
+  },
+  "steps": [
+    { "n": 1, "speaker": "princess", "riddle": "Your quest begins, the search is on! Look where travelers leave their shoes when they come home.", "hint": "Check by the front door, where shoes go.", "spot": "Shoe area or entryway" },
+    { "n": 2, "speaker": "knight", "riddle": "You're off to a start, you're doing great! Look where chilly snacks and cool drinks wait.", "hint": "Brrr! Try the fridge.", "spot": "Inside or near the refrigerator" },
+    { "n": 3, "speaker": "princess", "riddle": "Brave adventurers follow the trail. Look where stories and movies set sail.", "hint": "Where do you watch shows? Check the TV or couch.", "spot": "TV, couch or movie area" },
+    { "n": 4, "speaker": "knight", "riddle": "Through castle halls your quest must flow. Look where splashing water comes and goes.", "hint": "Where do you wash your hands?", "spot": "Bathroom sink" },
+    { "n": 5, "speaker": "princess", "riddle": "Your quest continues, don't delay! Look near the place where explorers play.", "hint": "Peek around the toys.", "spot": "Toy area or playroom" },
+    { "n": 6, "speaker": "knight", "riddle": "The trail grows warm, you're almost there! Look where sleepy heads rest without a care.", "hint": "Check a bed or under a pillow.", "spot": "A bed or pillow" },
+    { "n": 7, "speaker": "princess", "riddle": "Even heroes stop for snacks to eat. Look where forks and spoons all meet.", "hint": "Try the kitchen table or the spoon drawer.", "spot": "Kitchen table or utensil drawer" },
+    { "n": 8, "speaker": "knight", "riddle": "The adventure spins with a splash and swirl. Look where clothes twist, spin, and twirl.", "hint": "Where does laundry get washed?", "spot": "Washer or laundry area" },
+    { "n": 9, "speaker": "knight", "riddle": "Just one more clue, you're almost there! Look where books rest with patient care.", "hint": "Check the bookshelf.", "spot": "Books or a bookshelf" },
+    { "n": 10, "speaker": "princess", "riddle": "You followed the clues with courage and might. The birthday treasure is now in sight! Look where the birthday cake waits in delight.", "hint": "Where would a birthday cake be waiting?", "spot": "Near the birthday cake", "final": true }
+  ],
+  "found": [
+    "You found it! Great detective work!",
+    "Hooray! The trail continues!",
+    "Brilliant! Onward, brave explorers!",
+    "You're a natural! Keep going!",
+    "Amazing! The kingdom is proud of you!"
+  ],
+  "finale": {
+    "art": "img/celebrate.webp",
+    "title": "Quest Complete!",
+    "lines": [
+      "You did it! The birthday treasure has been found!",
+      "Happy birthday, {name}! Now let's celebrate!"
+    ],
+    "badge": "Royal Birthday Explorer"
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quest Master | Confetti Story Kits</title>
+  <meta name="description" content="Your phone becomes the Quest Master: story, clues, hints and a big confetti finale.">
+  <meta name="theme-color" content="#f0468e">
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body class="play">
+  <div class="app">
+    <header class="topbar">
+      <a href="../"><img class="logo-sm" src="../assets/img/logo.webp" alt="Confetti Story Kits"></a>
+      <div class="row">
+        <button class="icon-btn" id="voiceBtn" aria-pressed="true" aria-label="Read aloud" title="Read aloud">🔊</button>
+        <button class="icon-btn" id="menuBtn" aria-label="Host menu" title="Host menu">⚙️</button>
+      </div>
+    </header>
+    <main id="view" aria-live="polite"></main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <script src="../assets/js/engine.js"></script>
+</body>
+</html>

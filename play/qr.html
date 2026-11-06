@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Stickers | Confetti Story Kits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body style="background:#fff">
+  <div class="wrap" style="padding:24px 16px">
+    <div class="no-print" style="margin-bottom:18px">
+      <h1 id="t" style="font-size:1.6rem">QR stickers</h1>
+      <p class="note">Print, cut, and tape one to the back of each matching clue card. When kids find a card, scan it and the Quest Master jumps right to that clue.</p>
+      <button class="btn small" onclick="print()">Print this page</button>
+    </div>
+    <div class="qr-grid" id="grid"></div>
+  </div>
+  <script>
+    (() => {
+      const id = (new URLSearchParams(location.search).get("q") || "").replace(/[^a-z0-9-]/gi, "");
+      const playUrl = new URL("./", location.href).href;
+      fetch(`../quests/${id}/quest.json`).then(r => r.json()).then(q => {
+        document.getElementById("t").textContent = `QR stickers: ${q.title}`;
+        const grid = document.getElementById("grid");
+        q.steps.forEach(s => {
+          const cell = document.createElement("div"); cell.className = "qr-cell";
+          const box = document.createElement("div"); box.className = "q";
+          const label = document.createElement("b"); label.textContent = s.final ? "Final Clue" : `Clue #${s.n}`;
+          cell.append(box, label); grid.append(cell);
+          new QRCode(box, { text: `${playUrl}?q=${id}&c=${s.n}`, width: 120, height: 120, colorDark: "#4a2160", correctLevel: QRCode.CorrectLevel.M });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
