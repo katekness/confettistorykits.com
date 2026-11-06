@@ -5,7 +5,7 @@
   "tagline": "The treasure box vanished from Detective Headquarters. Crack the case!",
   "ages": "4-8",
   "status": "live",
-  "cover": "img/celebrate.webp",
+  "cover": "img/duo.webp",
   "titleArt": "img/title.webp",
   "finalButton": "We found the treasure! 🔍",
   "theme": {
@@ -17,7 +17,7 @@
   "characters": {
     "ivy": {
       "name": "Detective Ivy",
-      "img": "img/ivy.webp",
+      "img": "img/ivy-body.webp",
       "avatar": "img/ivy-face.webp",
       "voice": {
         "pitch": 1.2,
@@ -26,7 +26,7 @@
     },
     "theo": {
       "name": "Detective Theo",
-      "img": "img/theo.webp",
+      "img": "img/theo-body.webp",
       "avatar": "img/theo-face.webp",
       "voice": {
         "pitch": 0.95,
@@ -139,8 +139,8 @@
     "The trail is getting warmer!"
   ],
   "finale": {
-    "art": "img/celebrate.webp",
-    "artAlt": "Detective Ivy celebrating",
+    "art": "img/duo.webp",
+    "artAlt": "Detective Ivy and Detective Theo celebrating",
     "title": "Case Closed!",
     "lines": [
       "You found the missing treasure!",
@@ -151,7 +151,7 @@
   "print": {
     "kitLabel": "Story Kit #2",
     "subtitle": "A printable detective mystery where kids follow clues to find the missing treasure.",
-    "coverArt": "img/celebrate.webp",
+    "coverArt": "img/duo.webp",
     "coverFeatures": [
       "Detective story case file",
       "10 rhyming clue cards",
@@ -188,7 +188,7 @@
     "endCard": {
       "title": "Case Closed!",
       "sub": "Treasure Found!",
-      "art": "img/celebrate.webp"
+      "art": "img/duo.webp"
     },
     "whatToPrint": [
       "Case file story page",
