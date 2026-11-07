@@ -318,7 +318,7 @@
         h("p", { style: "line-height:1.55;margin:0 0 6px" }, "Already have it? Scan any QR code on your printed kit and the adventure opens right up."),
         h("p", { class: "note" }, "Your phone remembers the kit after the first scan.")),
       h("div", { class: "actions" },
-        h("a", { class: "btn", href: q.etsyUrl || "https://www.etsy.com/shop/ConfettiStoryKits" }, "Get this kit on Etsy"),
+        h("a", { class: "btn", href: q.etsyUrl || "https://confettistorykits.etsy.com" }, "Get this kit on Etsy"),
         h("a", { class: "btn secondary small", href: "../" }, "See all story kits"))));
   }
 
