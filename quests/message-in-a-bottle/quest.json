@@ -1,0 +1,381 @@
+{
+  "id": "message-in-a-bottle",
+  "kitNumber": 4,
+  "title": "The Message in a Bottle",
+  "tagline": "Captain Starwave is choosing a new crew. Meet her ocean friends, collect the map, and find her treasure!",
+  "ages": "4-8",
+  "status": "live",
+  "cover": "img/crew.webp",
+  "titleArt": "img/title.webp",
+  "finalButton": "We found the treasure! 🏴‍☠️",
+  "theme": {
+    "primary": "#0e6e8c",
+    "accent": "#e0682b",
+    "soft": "#e6f5f6",
+    "gold": "#e8b44a",
+    "bg": "linear-gradient(170deg, #eaf8fa 0%, #f6f1e4 60%, #fbe9d6 100%)",
+    "confetti": [
+      "#0e6e8c",
+      "#e0682b",
+      "#e8b44a",
+      "#5fc8c8",
+      "#f3a6b5",
+      "#ffffff"
+    ]
+  },
+  "characters": {
+    "starwave": {
+      "name": "Captain Starwave",
+      "img": "img/starwave.webp",
+      "avatar": "img/starwave-face.webp"
+    },
+    "finn": {
+      "name": "First Mate Finn",
+      "img": "img/finn.webp",
+      "avatar": "img/finn-face.webp"
+    },
+    "mango": {
+      "name": "Mango the Parrot",
+      "img": "img/mango.webp",
+      "avatar": "img/mango-face.webp"
+    },
+    "ollie": {
+      "name": "Ollie the Octopus",
+      "img": "img/ollie.webp",
+      "avatar": "img/ollie-face.webp"
+    },
+    "sway": {
+      "name": "Sway the Seaweed Sprite",
+      "img": "img/sway.webp",
+      "avatar": "img/sway-face.webp"
+    },
+    "claw": {
+      "name": "Captain Claw",
+      "img": "img/claw.webp",
+      "avatar": "img/claw-face.webp"
+    },
+    "pearla": {
+      "name": "Pearla the Mermaid",
+      "img": "img/pearla.webp",
+      "avatar": "img/pearla-face.webp"
+    }
+  },
+  "setup": {
+    "nameLabel": "Newest member of the crew",
+    "namePlaceholder": "e.g. Leo",
+    "defaultName": "our newest crew member",
+    "checklist": [
+      "Print and cut the clue cards and the 9 map pieces",
+      "Write your treasure's hiding spot in the X box on the map before you cut it",
+      "Hide each clue card with its matching map piece, using the hiding spot guide",
+      "Put Ollie's Shell Code with Clue #4 and Sway's Seaweed Maze with Clue #5",
+      "Hide the treasure (the paper chest, treats or small prizes) at your X spot",
+      "Roll up Captain Starwave's letter in a bottle or jar, and keep Clue #1 and map piece #1 in your hand"
+    ]
+  },
+  "intro": {
+    "speaker": "starwave",
+    "art": "img/bottle.webp",
+    "lines": [
+      "Ahoy, sailors! A message in a bottle has washed ashore, and it's from Captain Starwave!",
+      "She's hanging up her captain's hat, and she's looking for a brave new crew to inherit her treasure.",
+      "Her ocean friends each guard one piece of her treasure map. Meet them all, collect every piece, and the map will show you where the treasure hides.",
+      "{name}, First Mate Finn and Mango are waiting with your first clue. Anchors aweigh!"
+    ],
+    "button": "Set sail!"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "speaker": "finn",
+      "meet": "Ahoy! I'm First Mate Finn, and this is Mango. Captain Starwave sent us to guide you. Here's map piece #1!",
+      "riddle": "Welcome aboard, brave crew of the sea! Look where the water splashes free.",
+      "hint": "Where do you take a bath?",
+      "spot": "Bathtub or bathroom"
+    },
+    {
+      "n": 2,
+      "speaker": "mango",
+      "avatar": "img/badge-starfish.webp",
+      "meet": "Squawk! Welcome to Starfish Shore! Grab map piece #2.",
+      "riddle": "Seagulls watch from way up high. Look by a window, near the sky!",
+      "hint": "Check a windowsill.",
+      "spot": "A windowsill"
+    },
+    {
+      "n": 3,
+      "speaker": "mango",
+      "avatar": "img/badge-seagull.webp",
+      "meet": "Squawk! You made it to Seagull Lookout! Here's map piece #3.",
+      "riddle": "Eight wiggly arms are waiting for you, where the dishes get washed and the water runs too!",
+      "hint": "Check the kitchen sink.",
+      "spot": "Kitchen sink, with Ollie's Shell Code page"
+    },
+    {
+      "n": 4,
+      "speaker": "ollie",
+      "meet": "Hello! I'm Ollie the octopus. I guard map piece #4, and the next clue is locked in my secret shell code!",
+      "riddle": "Crack my shell code, one shell at a time. Each picture is a letter. The word tells you where Sway is hiding!",
+      "hint": "Match each picture to its letter in the key. It spells P-I-L-L-O-W.",
+      "spot": "A pillow or bed, with Sway's Seaweed Maze page",
+      "activity": "cipher"
+    },
+    {
+      "n": 5,
+      "speaker": "sway",
+      "meet": "Swish, swish! I'm Sway the seaweed sprite. Map piece #5 is yours if you can find your way through my maze!",
+      "riddle": "Wiggle through my seaweed maze. Only one path finds the way. Follow it to see where the old ship lay!",
+      "hint": "Start at Sway and trace the path with your finger. It leads to the COUCH.",
+      "spot": "Under the couch or between the cushions",
+      "activity": "maze"
+    },
+    {
+      "n": 6,
+      "speaker": "mango",
+      "avatar": "img/badge-shipwreck.webp",
+      "meet": "Squawk! You found the Hidden Shipwreck! Here's map piece #6.",
+      "riddle": "A crab who walks a sideways track is hiding where your shoes come back!",
+      "hint": "Look where the shoes and boots are kept.",
+      "spot": "Shoes or boots by the door"
+    },
+    {
+      "n": 7,
+      "speaker": "claw",
+      "meet": "Click-clack! I'm Captain Claw, keeper of the gold coins. Map piece #7 is all yours!",
+      "riddle": "Follow my coins, they shine and glow. The toy box is where you go!",
+      "hint": "Follow the gold coins, or check the toy box.",
+      "spot": "Toy box or playroom (add a trail of chocolate gold coins if you like)"
+    },
+    {
+      "n": 8,
+      "speaker": "mango",
+      "avatar": "img/badge-reef.webp",
+      "meet": "Squawk! The Coral Reef! So colorful! Here's map piece #8.",
+      "riddle": "Pearla loves stories, old and new. Look where the books are waiting for you!",
+      "hint": "Check the bookshelf.",
+      "spot": "Books or a bookshelf"
+    },
+    {
+      "n": 9,
+      "speaker": "pearla",
+      "avatar": "img/badge-cove.webp",
+      "meet": "Hello, brave crew! I'm Pearla, and this is Coral Cove. You've met every friend of the sea. Here's the last map piece!",
+      "riddle": "Lay your map pieces side by side. X marks where the treasure hides!",
+      "hint": "Put the 9 pieces together like a puzzle. The box by the X tells you where to look.",
+      "spot": "Wherever you wrote in the X box on the map",
+      "final": true
+    }
+  ],
+  "found": [
+    "Land ho! Another piece of the map!",
+    "Shiver me timbers, nice work!",
+    "Ahoy! The treasure is getting closer!",
+    "Mango says: squawk, squawk, hooray!",
+    "You're a natural sailor!"
+  ],
+  "finale": {
+    "art": "img/chest-open.webp",
+    "artAlt": "Captain Starwave's open treasure chest",
+    "title": "Treasure Found!",
+    "lines": [
+      "Ahoy, {name}! You met every friend of the sea and found my treasure.",
+      "From this day on, you're an official member of Captain Starwave's crew. Fair winds and happy sailing!"
+    ],
+    "badge": "Junior Pirate Crew Member"
+  },
+  "print": {
+    "kitLabel": "Story Kit #4",
+    "subtitle": "A printable pirate adventure where kids meet ocean friends, collect a 9-piece treasure map, and find the hidden treasure.",
+    "coverArt": "img/chest-open.webp",
+    "coverFeatures": [
+      "Message-in-a-bottle letter",
+      "9 clue cards from 9 ocean friends",
+      "9-piece treasure map: X marks your spot",
+      "Shell code, seaweed maze and quest tracker",
+      "Phone Quest Master reads every clue"
+    ],
+    "storyStyle": "letter",
+    "storyPaper": "img/letter.webp",
+    "cardPaper": "img/map-piece.webp",
+    "decor": [
+      "img/starfish.webp",
+      "img/shell.webp",
+      "img/coin.webp",
+      "img/pearl.webp",
+      "img/compass.webp"
+    ],
+    "wash": [
+      "#eaf8fa",
+      "#f6f1e4",
+      "#fbe9d6"
+    ],
+    "tint": [
+      "#eef8f8",
+      "#fbf3e6",
+      "#cfe6e8"
+    ],
+    "storyTitle": "A Message from Captain Starwave",
+    "storyLines": [
+      "Ahoy, sailors!",
+      "",
+      "After many years on the sea, I'm hanging up my captain's hat. Before I do, I need a brave new crew to inherit my treasure.",
+      "",
+      "My ocean friends each guard one piece of my treasure map. Find them all, collect every piece, and put the map together. X marks the spot!",
+      "",
+      "First Mate Finn and my parrot Mango will start you off. Be kind to my friends, solve their puzzles, and never give up.",
+      "",
+      "Fair winds,",
+      "Captain Starwave"
+    ],
+    "storyCall": "Anchors aweigh!",
+    "storyAside": {
+      "speaker": "mango",
+      "text": "Squawk! Your first clue is in your hands!"
+    },
+    "belongsLabel": "Newest crew member:",
+    "startCard": {
+      "speaker": "starwave",
+      "title": "A Message in a Bottle!",
+      "text": "Ahoy! Meet my ocean friends, collect my map, and my treasure is yours!"
+    },
+    "endCard": {
+      "title": "Treasure Found!",
+      "sub": "Welcome to the crew!",
+      "art": "img/chest-open.webp"
+    },
+    "whatToPrint": [
+      "Captain Starwave's letter",
+      "Clue cards (2 pages)",
+      "Treasure map (cut into 9 pieces)",
+      "Ollie's Shell Code and Sway's Seaweed Maze",
+      "Quest tracker and crew certificate",
+      "Foldable treasure chest (cardstock works best)"
+    ],
+    "parentTip": "Roll the letter into a clean bottle or jar and \"wash it ashore\" by the front door. Setup takes about 15 minutes, so do it while the crew is busy.",
+    "setupTime": "About 15 minutes",
+    "extras": [
+      "tracker",
+      "map",
+      "cipher",
+      "maze",
+      "chest"
+    ],
+    "cipher": {
+      "word": "PILLOW",
+      "symbols": {
+        "P": "img/shell.webp",
+        "I": "img/starfish.webp",
+        "L": "img/coin.webp",
+        "O": "img/pearl.webp",
+        "W": "img/compass.webp"
+      },
+      "speaker": "ollie"
+    },
+    "maze": {
+      "answer": "COUCH",
+      "decoys": [
+        "BATHTUB",
+        "GARDEN"
+      ],
+      "speaker": "sway",
+      "seed": 7
+    },
+    "map": {
+      "image": "img/map.webp",
+      "xBox": {
+        "left": 70,
+        "top": 56,
+        "width": 24
+      },
+      "xMark": {
+        "left": 61,
+        "top": 70
+      }
+    },
+    "tracker": [
+      {
+        "label": "First Mate Finn",
+        "img": "img/finn-face.webp"
+      },
+      {
+        "label": "Starfish Shore",
+        "img": "img/badge-starfish.webp"
+      },
+      {
+        "label": "Seagull Lookout",
+        "img": "img/badge-seagull.webp"
+      },
+      {
+        "label": "Ollie the Octopus",
+        "img": "img/ollie-face.webp"
+      },
+      {
+        "label": "Sway the Seaweed Sprite",
+        "img": "img/sway-face.webp"
+      },
+      {
+        "label": "Hidden Shipwreck",
+        "img": "img/badge-shipwreck.webp"
+      },
+      {
+        "label": "Captain Claw",
+        "img": "img/claw-face.webp"
+      },
+      {
+        "label": "Coral Reef",
+        "img": "img/badge-reef.webp"
+      },
+      {
+        "label": "Pearla at Coral Cove",
+        "img": "img/pearla-face.webp"
+      }
+    ],
+    "chest": {
+      "front": "img/chest-closed.webp"
+    },
+    "tips": [
+      {
+        "title": "Pirate gear station",
+        "text": "Let sailors suit up while everyone arrives.",
+        "list": [
+          "Paper pirate hats or bandanas",
+          "Eye patches from felt and elastic",
+          "Paper-towel-tube spyglasses",
+          "Gold coin stickers for their quest tracker"
+        ]
+      },
+      {
+        "title": "Set the scene",
+        "list": [
+          "Play ocean waves or sea shanties",
+          "Lay a blue blanket \"ocean\" by the front door where the bottle washes ashore",
+          "Name the birthday kid Captain for the day"
+        ]
+      },
+      {
+        "title": "Pirate snacks",
+        "text": "Save these for after the treasure is found.",
+        "list": [
+          "Gold fish crackers and \"seaweed\" snap peas",
+          "Pirate punch with orange slices",
+          "Chocolate gold coins from Captain Claw's trail"
+        ]
+      },
+      {
+        "title": "Find the treasure",
+        "text": "When the map is complete, everyone shouts \"X marks the spot!\" Open the treasure together, then hand out crew certificates."
+      }
+    ],
+    "certificate": {
+      "kicker": "Captain Starwave's Ship",
+      "title": "Official Pirate Crew Member",
+      "line": "is hereby named an",
+      "body": "for meeting every friend of the sea, cracking Ollie's code, and finding Captain Starwave's treasure.",
+      "signer": "Captain Starwave & First Mate Finn",
+      "signerRole": "Captain and first mate"
+    },
+    "backLine": "If your crew loved this adventure, more quests are on the way."
+  },
+  "accessHash": "31ffb6f7c0142612a1f764a4632ed3702fc185987567b8d1a6aff4d363d2f282",
+  "etsyUrl": "https://www.etsy.com/shop/ConfettiStoryKits"
+}

@@ -232,7 +232,7 @@
     const riddle = riddleFor(step), hint = hintFor(step);
     const hintEl = h("p", { class: "hint", id: "hint" }, "💡 " + hint);
     const right = n % 2 === 0;
-    const intro = n === 1 ? `Read Clue #1 together, ${state.name || "brave explorers"}!` : `Clue #${n}! Let's read it together.`;
+    const intro = step.meet ? fill(step.meet) : (n === 1 ? `Read Clue #1 together, ${state.name || "brave explorers"}!` : `Clue #${n}! Let's read it together.`);
 
     const next = () => {
       sfx.chime(); burst(60);

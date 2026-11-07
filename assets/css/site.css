@@ -316,3 +316,5 @@ body { background: #fff9fd; }
 .who p { margin: 0; color: #5b4469; line-height: 1.5; font-size: .95rem; }
 @media (max-width: 860px) { .who { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .who { grid-template-columns: 1fr; } }
+
+.screen > img.title-art { max-height: 230px; width: auto; max-width: min(420px, 92%); object-fit: contain; }
