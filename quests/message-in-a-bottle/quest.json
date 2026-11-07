@@ -169,7 +169,8 @@
     }
   ],
   "found": [
-    "Land ho! Another piece of the map!",
+    "Land ho!",
+    "Another piece of the map!",
     "Shiver me timbers, nice work!",
     "Ahoy! The treasure is getting closer!",
     "Mango says: squawk, squawk, hooray!",
@@ -274,7 +275,15 @@
         "A": "img/bottle.webp",
         "E": "img/chest-closed.webp"
       },
-      "keyOrder": ["L", "A", "W", "P", "E", "O", "I"],
+      "keyOrder": [
+        "L",
+        "A",
+        "W",
+        "P",
+        "E",
+        "O",
+        "I"
+      ],
       "intro": "I wrote where my friend Sway is hiding in secret shell code! Find each picture in my key, then write its letter in the box under it. Read the word and go look there!",
       "hint": "Stuck? It's where you rest your sleepy head.",
       "speaker": "ollie"
@@ -432,8 +441,21 @@
         "meet": "audio/mango-step8-meet.mp3",
         "riddle": "audio/mango-step8-riddle.mp3",
         "hint": "audio/mango-step8-hint.mp3"
+      },
+      "9": {
+        "meet": "audio/pearla-step9-meet.mp3",
+        "riddle": "audio/pearla-step9-riddle.mp3",
+        "hint": "audio/pearla-step9-hint.mp3"
       }
-    }
+    },
+    "cheers": [
+      "audio/mango-cheer-1.mp3",
+      "audio/mango-cheer-2.mp3",
+      "audio/mango-cheer-3.mp3",
+      "audio/mango-cheer-4.mp3",
+      "audio/mango-cheer-5.mp3",
+      "audio/mango-cheer-6.mp3"
+    ]
   },
   "accessHash": "31ffb6f7c0142612a1f764a4632ed3702fc185987567b8d1a6aff4d363d2f282",
   "etsyUrl": "https://confettistorykits.etsy.com/listing/4611614372/pirate-treasure-hunt-printable-for-kids"
