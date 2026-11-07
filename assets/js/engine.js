@@ -114,6 +114,22 @@
     };
     next();
   }
+  // cheers play on their own player so changing screens doesn't cut them off
+  let cheerClip = null; const cheerCache = {};
+  function playCheer(f) {
+    if (!voiceOn) return;
+    try {
+      if (cheerClip) cheerClip.pause();
+      cheerClip = cheerCache[f] || new Audio(asset(f));
+      cheerClip.currentTime = 0;
+      cheerClip.play().catch(() => {});
+    } catch { /* ignore */ }
+  }
+  function preloadCheers() {
+    for (const f of (quest.voice && quest.voice.cheers) || []) {
+      if (!cheerCache[f]) { const a = new Audio(asset(f)); a.preload = "auto"; cheerCache[f] = a; }
+    }
+  }
   const V = () => quest.voice || {};
   const stepVoice = (n) => (V().steps || {})[n] || {};
 
@@ -249,6 +265,7 @@
   }
 
   function renderStep(n) {
+    preloadCheers();
     const step = quest.steps.find(s => s.n === n);
     if (!step) { go("setup"); return h("div"); }
     const riddle = riddleFor(step), hint = hintFor(step);
@@ -264,7 +281,7 @@
       if (step.final) { go("done"); if (V().finale) playClips(V().finale); return; }
       const ci = (n - 1) % quest.found.length;
       toast(quest.found[ci]);
-      if (V().cheers && V().cheers[ci]) playClips([V().cheers[ci]]);
+      if (V().cheers && V().cheers[ci]) playCheer(V().cheers[ci]);
       setTimeout(() => go(n + 1), 900);
     };
 
