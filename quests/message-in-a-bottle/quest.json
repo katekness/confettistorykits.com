@@ -174,8 +174,8 @@
     "You're a natural sailor!"
   ],
   "finale": {
-    "art": "img/chest-open.webp",
-    "artAlt": "Captain Starwave's open treasure chest",
+    "art": "img/crew.webp",
+    "artAlt": "Captain Starwave and the whole crew celebrating on the beach",
     "title": "Treasure Found!",
     "lines": [
       "Ahoy, {name}! You met every friend of the sea and found my treasure.",
