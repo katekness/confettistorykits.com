@@ -77,10 +77,10 @@
     "speaker": "starwave",
     "art": "img/bottle.webp",
     "lines": [
-      "Ahoy, sailors! A message in a bottle has washed ashore, and it's from Captain Starwave!",
-      "She's hanging up her captain's hat, and she's looking for a brave new crew to inherit her treasure.",
-      "Her ocean friends each guard one piece of her treasure map. Meet them all, collect every piece, and the map will show you where the treasure hides.",
-      "{name}, First Mate Finn and Mango are waiting with your first clue. Anchors aweigh!"
+      "Ahoy, sailors! It's me, Captain Starwave. If you're hearing this, my message in a bottle found you!",
+      "After many years on the sea, I'm hanging up my captain's hat. Before I do, I need a brave new crew to inherit my treasure.",
+      "My ocean friends each guard one piece of my treasure map. Meet them all, collect every piece, and the map will show you where the treasure hides.",
+      "{name}, First Mate Finn and my parrot Mango are waiting with your first clue. Anchors aweigh!"
     ],
     "button": "Set sail!"
   },
