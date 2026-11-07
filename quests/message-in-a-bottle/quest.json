@@ -88,6 +88,8 @@
     {
       "n": 1,
       "speaker": "finn",
+      "speakerImg": "img/finn-mango.webp",
+      "speakerName": "First Mate Finn & Mango",
       "meet": "Ahoy! I'm First Mate Finn, and this is Mango. Captain Starwave sent us to guide you. Here's map piece #1!",
       "riddle": "Welcome aboard, brave crew of the sea! Fill it with bubbles and splash with glee. Where do you scrub from your head to your knee?",
       "hint": "Where do you take a bath?",

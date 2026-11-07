@@ -170,11 +170,12 @@
   }
 
   /* ---------- Pieces ---------- */
-  function speakerBlock(key, text, right = false) {
+  function speakerBlock(key, text, right = false, over = {}) {
     const ch = quest.characters[key];
-    return h("div", { class: "speaker" + (right ? " right" : "") },
-      h("img", { class: "char", src: asset(ch.img), alt: ch.name }),
-      h("div", { class: "bubble" }, h("span", { class: "who" }, ch.name), text));
+    const name = over.speakerName || ch.name;
+    return h("div", { class: "speaker" + (right ? " right" : "") + (over.speakerImg ? " wide" : "") },
+      h("img", { class: "char", src: asset(over.speakerImg || ch.img), alt: name }),
+      h("div", { class: "bubble" }, h("span", { class: "who" }, name), text));
   }
   function progress(current) {
     const total = quest.steps.length;
@@ -269,7 +270,7 @@
 
     return h("section", { class: "screen" },
       progress(n),
-      speakerBlock(step.speaker, intro, right),
+      speakerBlock(step.speaker, intro, right, step),
       h("div", { class: "clue" },
         h("span", { class: "tagline" }, step.final ? "Final Clue" : `Clue #${n}`),
         h("p", { class: "riddle" }, riddle),

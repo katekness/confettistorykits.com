@@ -405,3 +405,4 @@ body { background: #fff9fd; }
 .kit3 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .kit3 .kit3-lead { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
 @media (max-width: 820px) { .kit3-title { height: 96px; } .kit3-art { height: 210px; } }
+.speaker.wide img.char { width: 150px; }
