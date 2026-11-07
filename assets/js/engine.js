@@ -98,11 +98,31 @@
       speechSynthesis.speak(u);
     } catch { /* ignore */ }
   }
+  /* ---------- Recorded character voices (quest.voice), falling back to the reader voice ---------- */
+  let clip = null, clipQueue = [];
+  function stopClips() { clipQueue = []; if (clip) { try { clip.pause(); } catch { /* ignore */ } clip = null; } }
+  function playClips(files, fallbackText, speakerKey) {
+    if (!voiceOn) return;
+    files = (files || []).filter(Boolean);
+    if (!files.length) { if (fallbackText) say(fallbackText, speakerKey); return; }
+    stopClips(); if ("speechSynthesis" in window) speechSynthesis.cancel();
+    clipQueue = files.slice();
+    const next = () => {
+      const f = clipQueue.shift(); if (!f) { clip = null; return; }
+      clip = new Audio(asset(f)); clip.onended = next;
+      clip.play().catch(() => { stopClips(); if (fallbackText) say(fallbackText, speakerKey); });
+    };
+    next();
+  }
+  const V = () => quest.voice || {};
+  const stepVoice = (n) => (V().steps || {})[n] || {};
+
   function setVoice(on) {
     voiceOn = on; store.set("cs:voice", on);
     voiceBtn.setAttribute("aria-pressed", String(on));
     voiceBtn.textContent = on ? "🔊" : "🔈";
     if (!on && "speechSynthesis" in window) speechSynthesis.cancel();
+    if (!on) stopClips();
   }
   voiceBtn.addEventListener("click", () => { audio(); setVoice(!voiceOn); sfx.tap(); });
 
@@ -164,6 +184,7 @@
   function go(step) {
     state.step = step; save();
     if ("speechSynthesis" in window) speechSynthesis.cancel();
+    stopClips();
     render(); scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -223,7 +244,7 @@
       bubble,
       h("div", { class: "actions" },
         h("button", { class: "btn", onclick: () => { sfx.chime(); go(1); } }, i.button),
-        h("button", { class: "btn secondary small", onclick: () => say(text.join(" "), i.speaker) }, "🔊 Read it aloud")));
+        h("button", { class: "btn secondary small", onclick: () => playClips(V().intro, text.join(" "), i.speaker) }, "🔊 Read it aloud")));
   }
 
   function renderStep(n) {
@@ -234,10 +255,15 @@
     const right = n % 2 === 0;
     const intro = step.meet ? fill(step.meet) : (n === 1 ? `Read Clue #1 together, ${state.name || "brave explorers"}!` : `Clue #${n}! Let's read it together.`);
 
+    const sv = stepVoice(n);
+    const riddleClips = customText(n) ? null : [step.meet ? sv.meet : null, sv.riddle];
+    const hintClips = customText(n) ? null : [sv.hint];
     const next = () => {
       sfx.chime(); burst(60);
-      if (step.final) { go("done"); return; }
-      toast(quest.found[(n - 1) % quest.found.length]);
+      if (step.final) { go("done"); if (V().finale) playClips(V().finale); return; }
+      const ci = (n - 1) % quest.found.length;
+      toast(quest.found[ci]);
+      if (V().cheers && V().cheers[ci]) playClips([V().cheers[ci]]);
       setTimeout(() => go(n + 1), 900);
     };
 
@@ -249,8 +275,8 @@
         h("p", { class: "riddle" }, riddle),
         hintEl),
       h("div", { class: "row" },
-        h("button", { class: "btn secondary small", onclick: () => say(riddle, step.speaker) }, "🔊 Read aloud"),
-        h("button", { class: "btn secondary small", onclick: () => { sfx.hint(); hintEl.classList.add("show"); say(hint, step.speaker); } }, "💡 Hint")),
+        h("button", { class: "btn secondary small", onclick: () => riddleClips && riddleClips.some(Boolean) ? playClips(riddleClips, riddle, step.speaker) : say(riddle, step.speaker) }, "🔊 Read aloud"),
+        h("button", { class: "btn secondary small", onclick: () => { sfx.hint(); hintEl.classList.add("show"); hintClips && hintClips.some(Boolean) ? playClips(hintClips, hint, step.speaker) : say(hint, step.speaker); } }, "💡 Hint")),
       h("div", { class: "spacer" }),
       h("div", { class: "actions" },
         h("button", { class: "btn", onclick: next }, step.final ? (quest.finalButton || "We found it! 🎉") : `We found Clue #${n + 1}!`),
@@ -268,6 +294,7 @@
       f.badge ? h("p", { class: "badge-out" }, "🏅 " + (state.name || "Our explorer"), h("small", {}, `is now an official ${f.badge}!`)) : null,
       h("div", { class: "actions" },
         h("button", { class: "btn", onclick: () => { burst(200); sfx.fanfare(); } }, "More confetti! 🎉"),
+        V().finale ? h("button", { class: "btn secondary small", onclick: () => playClips(V().finale, lines.join(" "), quest.intro.speaker) }, "🔊 Hear it again") : null,
         h("button", { class: "btn secondary small", onclick: () => { state.step = "setup"; save(); render(); } }, "Play again"),
         h("a", { class: "btn secondary small", href: "../" }, "See more story kits")));
   }

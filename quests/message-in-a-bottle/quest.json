@@ -382,6 +382,64 @@
     },
     "backLine": "If your crew loved this adventure, more quests are on the way."
   },
+  "voice": {
+    "intro": [
+      "audio/starwave-intro-1.mp3",
+      "audio/starwave-intro-2.mp3"
+    ],
+    "finale": [
+      "audio/starwave-finale-1.mp3"
+    ],
+    "cheers": [
+      "audio/mango-cheer-1.mp3",
+      "audio/mango-cheer-2.mp3",
+      "audio/mango-cheer-3.mp3",
+      "audio/mango-cheer-4.mp3",
+      "audio/mango-cheer-5.mp3"
+    ],
+    "steps": {
+      "1": {
+        "meet": "audio/finn-step1-meet.mp3",
+        "riddle": "audio/finn-step1-riddle.mp3",
+        "hint": "audio/finn-step1-hint.mp3"
+      },
+      "2": {
+        "meet": "audio/mango-step2-meet.mp3",
+        "riddle": "audio/mango-step2-riddle.mp3",
+        "hint": "audio/mango-step2-hint.mp3"
+      },
+      "3": {
+        "meet": "audio/mango-step3-meet.mp3",
+        "riddle": "audio/mango-step3-riddle.mp3",
+        "hint": "audio/mango-step3-hint.mp3"
+      },
+      "4": {
+        "meet": "audio/ollie-step4-meet.mp3",
+        "riddle": "audio/ollie-step4-riddle.mp3",
+        "hint": "audio/ollie-step4-hint.mp3"
+      },
+      "5": {
+        "meet": "audio/sway-step5-meet.mp3",
+        "riddle": "audio/sway-step5-riddle.mp3",
+        "hint": "audio/sway-step5-hint.mp3"
+      },
+      "6": {
+        "meet": "audio/mango-step6-meet.mp3",
+        "riddle": "audio/mango-step6-riddle.mp3",
+        "hint": "audio/mango-step6-hint.mp3"
+      },
+      "7": {
+        "meet": "audio/claw-step7-meet.mp3",
+        "riddle": "audio/claw-step7-riddle.mp3",
+        "hint": "audio/claw-step7-hint.mp3"
+      },
+      "8": {
+        "meet": "audio/mango-step8-meet.mp3",
+        "riddle": "audio/mango-step8-riddle.mp3",
+        "hint": "audio/mango-step8-hint.mp3"
+      }
+    }
+  },
   "accessHash": "31ffb6f7c0142612a1f764a4632ed3702fc185987567b8d1a6aff4d363d2f282",
   "etsyUrl": "https://confettistorykits.etsy.com/listing/4611614372/pirate-treasure-hunt-printable-for-kids"
 }
