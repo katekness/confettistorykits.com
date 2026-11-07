@@ -61,70 +61,70 @@
     {
       "n": 1,
       "speaker": "elf",
-      "riddle": "Oh no, the pages flew away! Look where it's chilly, cold all day.",
+      "riddle": "Oh no, the pages flew away! One landed somewhere frosty and bright, where the milk stays cold all day and night!",
       "hint": "Brrr! Try the fridge.",
       "spot": "Inside or near the refrigerator"
     },
     {
       "n": 2,
       "speaker": "pip",
-      "riddle": "One page floated way up high, where the stockings hang nearby.",
+      "riddle": "One page floated way up high. Look where Santa leaves treats overnight, in fuzzy socks with names written bright!",
       "hint": "Where do your Christmas stockings hang?",
       "spot": "Stockings or fireplace (or a window ledge)"
     },
     {
       "n": 3,
       "speaker": "elf",
-      "riddle": "Even elves wash up each day. Check the sink, a page blew that way!",
+      "riddle": "Even elves wash up each day. Turn on the water, make bubbles play!",
       "hint": "Where do you wash your hands?",
       "spot": "Bathroom sink"
     },
     {
       "n": 4,
       "speaker": "pip",
-      "riddle": "Snuggle time is almost here. Check the couch, the page is near!",
+      "riddle": "Snuggle time is almost here! Where does your family sit and cheer? Dig in the cushions, soft and deep. A page crawled in there for a peek!",
       "hint": "Peek between the couch cushions.",
       "spot": "Couch cushions"
     },
     {
       "n": 5,
       "speaker": "elf",
-      "riddle": "Santa loves a story too. Look where books are lined up for you.",
+      "riddle": "Santa loves a story too. Look where the stories stand in a row, with pictures and pages ready to go!",
       "hint": "Check the bookshelf.",
       "spot": "Books or a bookshelf"
     },
     {
       "n": 6,
       "speaker": "pip",
-      "riddle": "Sugarplums dance in sleepy heads. Look for a page tucked in the beds!",
+      "riddle": "Sugarplums dance in sleepy heads. Look where you snuggle and say goodnight, under the blankets, tucked in tight!",
       "hint": "Check a bed or under a pillow.",
       "spot": "A bed or pillow"
     },
     {
       "n": 7,
       "speaker": "elf",
-      "riddle": "Snowy boots go by the door. Check the shoes for one page more!",
+      "riddle": "Snowy feet come through the door. What do you kick off and leave on the floor? They come in pairs, a left and a right!",
       "hint": "Look where the shoes and boots are kept.",
       "spot": "Shoes or boots by the door"
     },
     {
       "n": 8,
       "speaker": "pip",
-      "riddle": "The workshop makes a lot of toys. Check the toy box, girls and boys!",
+      "riddle": "Elves build gifts for kids to play. Look where your teddies and blocks all stay!",
       "hint": "Peek around the toys.",
       "spot": "Toy box or playroom"
     },
     {
       "n": 9,
       "speaker": "elf",
-      "riddle": "Cookies for Santa, milk in a cup. Look where the spoons are all stacked up!",
+      "riddle": "Cookies for Santa, milk in a cup. You stir with one and scoop it up! Look in the kitchen where they stay, ready for dinner every day.",
       "hint": "Check the spoon drawer in the kitchen.",
       "spot": "Kitchen utensil drawer or cookie jar"
     },
     {
       "n": 10,
       "speaker": "pip",
-      "riddle": "One last page and then we're done! Look under the tree for the very last one!",
+      "riddle": "One last page and then we're done! Look where the twinkly lights all glow, and presents wait in a pile below!",
       "hint": "Where do the presents go?",
       "spot": "Under the Christmas tree",
       "final": true

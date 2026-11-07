@@ -50,63 +50,63 @@
     {
       "n": 1,
       "speaker": "princess",
-      "riddle": "Your quest begins, the search is on! Look where travelers leave their shoes when they come home.",
+      "riddle": "Your quest begins, the search is on! They go on your feet when you head out to play. Look where they wait at the end of the day!",
       "hint": "Check by the front door, where shoes go.",
       "spot": "Shoe area or entryway"
     },
     {
       "n": 2,
       "speaker": "knight",
-      "riddle": "You're off to a start, you're doing great! Look where chilly snacks and cool drinks wait.",
+      "riddle": "You're off to a start, you're doing great! It hums all day and it's cold inside. That's where the milk and the juice all hide!",
       "hint": "Brrr! Try the fridge.",
       "spot": "Inside or near the refrigerator"
     },
     {
       "n": 3,
       "speaker": "princess",
-      "riddle": "Brave adventurers follow the trail. Look where stories and movies set sail.",
+      "riddle": "Brave adventurers follow the trail. Grab some popcorn and cuddle in tight. Where do you watch a movie at night?",
       "hint": "Where do you watch shows? Check the TV or couch.",
       "spot": "TV, couch or movie area"
     },
     {
       "n": 4,
       "speaker": "knight",
-      "riddle": "Through castle halls your quest must flow. Look where splashing water comes and goes.",
+      "riddle": "Through castle halls your quest must flow. Turn the handle and water will go. Bubbles and soap, scrub-a-dub-dee. Wash your hands and you will see!",
       "hint": "Where do you wash your hands?",
       "spot": "Bathroom sink"
     },
     {
       "n": 5,
       "speaker": "princess",
-      "riddle": "Your quest continues, don't delay! Look near the place where explorers play.",
+      "riddle": "Your quest continues, don't delay! Where do the blocks and the teddies stay?",
       "hint": "Peek around the toys.",
       "spot": "Toy area or playroom"
     },
     {
       "n": 6,
       "speaker": "knight",
-      "riddle": "The trail grows warm, you're almost there! Look where sleepy heads rest without a care.",
+      "riddle": "The trail grows warm, you're almost there! Where do you snuggle and dream each night, under the blanket, tucked in tight?",
       "hint": "Check a bed or under a pillow.",
       "spot": "A bed or pillow"
     },
     {
       "n": 7,
       "speaker": "princess",
-      "riddle": "Even heroes stop for snacks to eat. Look where forks and spoons all meet.",
+      "riddle": "Even heroes need a treat. Where does your family sit down to eat?",
       "hint": "Try the kitchen table or the spoon drawer.",
       "spot": "Kitchen table or utensil drawer"
     },
     {
       "n": 8,
       "speaker": "knight",
-      "riddle": "The adventure spins with a splash and swirl. Look where clothes twist, spin, and twirl.",
+      "riddle": "The adventure spins with a splash and swirl. Dirty socks go in, then round they twirl!",
       "hint": "Where does laundry get washed?",
       "spot": "Washer or laundry area"
     },
     {
       "n": 9,
       "speaker": "knight",
-      "riddle": "Just one more clue, you're almost there! Look where books rest with patient care.",
+      "riddle": "Just one more clue, you're almost there! Find where the stories rest in a row, with pages and pictures ready to go.",
       "hint": "Check the bookshelf.",
       "spot": "Books or a bookshelf"
     },

@@ -89,7 +89,7 @@
       "n": 1,
       "speaker": "finn",
       "meet": "Ahoy! I'm First Mate Finn, and this is Mango. Captain Starwave sent us to guide you. Here's map piece #1!",
-      "riddle": "Welcome aboard, brave crew of the sea! Look where the water splashes free.",
+      "riddle": "Welcome aboard, brave crew of the sea! Fill it with bubbles and splash with glee. Where do you scrub from your head to your knee?",
       "hint": "Where do you take a bath?",
       "spot": "Bathtub or bathroom"
     },
@@ -98,7 +98,7 @@
       "speaker": "mango",
       "avatar": "img/badge-starfish.webp",
       "meet": "Squawk! Welcome to Starfish Shore! Grab map piece #2.",
-      "riddle": "Seagulls watch from way up high. Look by a window, near the sky!",
+      "riddle": "Seagulls watch from way up high. Look through the glass where you see the sky!",
       "hint": "Check a windowsill.",
       "spot": "A windowsill"
     },
@@ -134,7 +134,7 @@
       "speaker": "mango",
       "avatar": "img/badge-shipwreck.webp",
       "meet": "Squawk! You found the Hidden Shipwreck! Here's map piece #6.",
-      "riddle": "A crab who walks a sideways track is hiding where your shoes come back!",
+      "riddle": "A crab walks sideways, left then right. Look for things that come in pairs, where you squeeze your toes in tight!",
       "hint": "Look where the shoes and boots are kept.",
       "spot": "Shoes or boots by the door"
     },
@@ -142,7 +142,7 @@
       "n": 7,
       "speaker": "claw",
       "meet": "Click-clack! I'm Captain Claw, keeper of the gold coins. Map piece #7 is all yours!",
-      "riddle": "Follow my coins, they shine and glow. The toy box is where you go!",
+      "riddle": "Follow my coins, they shine and glow. They lead to where your playthings go!",
       "hint": "Follow the gold coins, or check the toy box.",
       "spot": "Toy box or playroom (add a trail of chocolate gold coins if you like)"
     },
@@ -151,7 +151,7 @@
       "speaker": "mango",
       "avatar": "img/badge-reef.webp",
       "meet": "Squawk! The Coral Reef! So colorful! Here's map piece #8.",
-      "riddle": "Pearla loves stories, old and new. Look where the books are waiting for you!",
+      "riddle": "Pearla loves stories, old and new. Look where they line up, waiting for you!",
       "hint": "Check the bookshelf.",
       "spot": "Books or a bookshelf"
     },
