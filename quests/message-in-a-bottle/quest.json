@@ -270,6 +270,13 @@
         "O": "img/pearl.webp",
         "W": "img/compass.webp"
       },
+      "decoys": {
+        "A": "img/bottle.webp",
+        "E": "img/chest-closed.webp"
+      },
+      "keyOrder": ["L", "A", "W", "P", "E", "O", "I"],
+      "intro": "I wrote where my friend Sway is hiding in secret shell code! Find each picture in my key, then write its letter in the box under it. Read the word and go look there!",
+      "hint": "Stuck? It's where you rest your sleepy head.",
       "speaker": "ollie"
     },
     "maze": {
