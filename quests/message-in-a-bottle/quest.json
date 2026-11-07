@@ -184,6 +184,7 @@
     "badge": "Junior Pirate Crew Member"
   },
   "print": {
+    "framedAvatars": true,
     "kitLabel": "Story Kit #4",
     "subtitle": "A printable pirate adventure where kids meet ocean friends, collect a 9-piece treasure map, and find the hidden treasure.",
     "coverArt": "img/crew.webp",

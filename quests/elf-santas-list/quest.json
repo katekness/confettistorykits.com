@@ -148,6 +148,7 @@
     "badge": "North Pole Helper"
   },
   "print": {
+    "framedAvatars": true,
     "kitLabel": "Story Kit #3",
     "subtitle": "A printable Christmas page hunt where kids find the pieces of Santa's list before Christmas Eve.",
     "coverArt": "img/duo.webp",
