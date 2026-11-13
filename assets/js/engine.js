@@ -206,11 +206,37 @@
   }
 
   /* ---------- Screens ---------- */
+  /* ---------- Play modes (e.g. home / classroom): a variant overrides clues, intro, setup and voice ---------- */
+  function applyMode(m) {
+    const b = quest._base, v = (b.variants || {})[m];
+    quest.steps = b.steps; quest.intro = b.intro; quest.setup = b.setup; quest.voice = b.voice;
+    if (!v) return;
+    quest.steps = b.steps.map(st => Object.assign({}, st, (v.steps || []).find(x => x.n === st.n) || {}));
+    if (v.intro) quest.intro = Object.assign({}, b.intro, v.intro);
+    if (v.setup) quest.setup = Object.assign({}, b.setup, v.setup);
+    if (b.voice) {
+      const vv = v.voice || {};
+      quest.voice = Object.assign({}, b.voice, { steps: vv.steps || {}, intro: vv.intro || (v.intro ? null : b.voice.intro) });
+    }
+  }
+  function modePicker() {
+    const vs = quest._base.variants; if (!vs) return null;
+    const cur = state.mode || "home";
+    const opts = [["home", "🏠 At home"]].concat(Object.entries(vs).map(([k, v]) => [k, v.label || k]));
+    return h("div", { class: "card panel" },
+      h("h2", {}, "Where are you playing?"),
+      h("div", { class: "modepick" }, opts.map(([k, label]) => h("button", {
+        class: "btn small " + (k === cur ? "" : "secondary"), "aria-pressed": String(k === cur),
+        onclick: () => { state.mode = k; save(); applyMode(k); sfx.tap(); render(); } }, label))),
+      h("p", { class: "note" }, "Each place has its own set of printed clue cards. Use the set that matches."));
+  }
+
   function renderSetup() {
     const s = quest.setup;
     const input = h("input", { class: "text", id: "name", type: "text", autocomplete: "off", maxlength: "24", placeholder: s.namePlaceholder, value: state.name || "" });
     return h("section", { class: "screen" },
       h("img", { class: "title-art", src: asset(quest.titleArt), alt: quest.title }),
+      modePicker(),
       h("div", { class: "card panel" },
         h("h2", {}, "Host setup"),
         h("label", { class: "field", for: "name" }, s.nameLabel),
@@ -329,7 +355,7 @@
       h("label", { class: "field" }, "Jump to"), jump,
       h("div", { class: "row", style: "margin:14px 0" },
         h("button", { class: "btn small", onclick: () => { const v = jump.value; dlg.close(); go(isNaN(v) ? v : +v); } }, "Go"),
-        h("button", { class: "btn secondary small", onclick: () => { dlg.close(); state = { name: state.name, custom: state.custom, step: "setup" }; go("setup"); } }, "Restart")),
+        h("button", { class: "btn secondary small", onclick: () => { dlg.close(); state = { name: state.name, custom: state.custom, mode: state.mode, step: "setup" }; go("setup"); } }, "Restart")),
       h("details", {}, h("summary", { style: "cursor:pointer;font-weight:700" }, "Hiding spot guide"),
         h("ul", { style: "padding-left:20px;line-height:1.6" },
           h("li", {}, h("b", {}, "Clue #1: "), "keep in your hand to start"),
@@ -391,6 +417,10 @@
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(async q => {
       quest = q;
+      quest._base = JSON.parse(JSON.stringify(q));
+      const mParam = params.get("m");
+      if (mParam && ((q.variants || {})[mParam] || mParam === "home")) { state.mode = mParam; save(); }
+      applyMode(state.mode || "home");
       if (!(await hasAccess(q))) { applyTheme(q.theme); document.title = q.title; history.replaceState(null, "", `?q=${questId}`); renderLocked(q); return; }
       document.title = `${q.title} | Quest Master`;
       applyTheme(q.theme);
@@ -399,7 +429,7 @@
       if (cParam === "end" || (jumpTo && q.steps.some(s => s.n === jumpTo))) {
         state.step = cParam === "end" ? "done" : jumpTo; save();
       }
-      if (cParam || params.get("k")) history.replaceState(null, "", `?q=${questId}`);
+      if (cParam || params.get("k") || params.get("m")) history.replaceState(null, "", `?q=${questId}`);
       render();
     })
     .catch(() => {

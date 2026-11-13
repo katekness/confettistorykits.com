@@ -155,7 +155,7 @@
     "coverArt": "img/duo.webp",
     "coverFeatures": [
       "Letter from Juniper the Elf",
-      "10 clue cards styled as Santa's torn list pages",
+      "Two clue sets: 10 for home, 10 for the classroom",
       "Quest Master on your phone: reads the clues, gives hints, throws the confetti",
       "Blank pages for your own hiding spots",
       "North Pole Helper certificate"
@@ -180,7 +180,7 @@
       "",
       "It's Juniper, Santa's list-keeper elf. I have a teeny, tiny problem.",
       "",
-      "I was carrying Santa's list to the workshop when a gust of North Pole wind blew the pages right out of my mittens. They landed all over your house!",
+      "I was carrying Santa's list to the workshop when a gust of North Pole wind blew the pages right out of my mittens. They landed all over the place, and some landed right where you are!",
       "",
       "Santa needs every page by Christmas Eve. Pip the reindeer and I can't do it without you.",
       "",
@@ -209,7 +209,7 @@
     },
     "whatToPrint": [
       "Letter from Juniper",
-      "List page clue cards (2 pages)",
+      "Home list-page clues (2 pages) or Classroom list-page clues (2 pages)",
       "North Pole Helper certificate",
       "Blank list pages (optional)"
     ],
@@ -320,6 +320,92 @@
         "riddle": "audio/pip-step10-riddle.mp3",
         "hint": "audio/pip-step10-hint.mp3"
       }
+    }
+  },
+  "variants": {
+    "classroom": {
+      "label": "🏫 At school",
+      "intro": {
+        "lines": [
+          "Oh, thank goodness you're here! I'm Juniper, and I keep Santa's list.",
+          "I was carrying it to the workshop when a big gust of North Pole wind blew the pages right out of my hands... and all over this classroom!",
+          "Santa needs the whole list by Christmas Eve. {name}, will you help me and Pip find every page?",
+          "Here's the first one. Let's go!"
+        ]
+      },
+      "setup": {
+        "nameLabel": "Class name (or a helper's name)",
+        "namePlaceholder": "e.g. Room 12",
+        "defaultName": "Santa's special helpers",
+        "checklist": [
+          "Print and cut the classroom list pages",
+          "Hide pages #2 through #10 using the classroom hiding spot guide",
+          "Put the List Complete card by the classroom tree or holiday display (add treats if you like)",
+          "Keep page #1 in your hand to start"
+        ]
+      },
+      "steps": [
+        {
+          "n": 1,
+          "riddle": "Oh no, the pages flew away! Look where your backpacks wait all day, hanging on hooks until it's time to play!",
+          "hint": "Check the cubbies or backpack hooks.",
+          "spot": "Cubbies or backpack hooks"
+        },
+        {
+          "n": 2,
+          "riddle": "One page floated past a machine that goes grind, grind, grind! Where do dull pencils get sharp? Look and you will find!",
+          "hint": "Check by the pencil sharpener.",
+          "spot": "Pencil sharpener"
+        },
+        {
+          "n": 3,
+          "riddle": "Even elves need a drink each day. Find where the water splashes and sprays!",
+          "hint": "Check the classroom sink or water fountain.",
+          "spot": "Classroom sink or water fountain"
+        },
+        {
+          "n": 4,
+          "riddle": "Criss-cross applesauce, sit down in a ring! Look on the spot where we gather to sing.",
+          "hint": "Check the rug where the class sits together.",
+          "spot": "Reading rug or carpet"
+        },
+        {
+          "n": 5,
+          "riddle": "Santa loves a story too. Look where the stories stand in a row, with pictures and pages ready to go!",
+          "hint": "Check the class library or bookshelf.",
+          "spot": "Class library or bookshelf"
+        },
+        {
+          "n": 6,
+          "riddle": "Crayons, glue sticks, scissors too! Look where the art things wait for you!",
+          "hint": "Check the art supply shelf or bins.",
+          "spot": "Art supplies"
+        },
+        {
+          "n": 7,
+          "riddle": "Christmas Eve is coming near! Look where we count the days of the year!",
+          "hint": "Check the class calendar.",
+          "spot": "Classroom calendar"
+        },
+        {
+          "n": 8,
+          "riddle": "Is it snowing? Take a peek! Look by the glass where the sunbeams sneak!",
+          "hint": "Check by a window.",
+          "spot": "A window sill"
+        },
+        {
+          "n": 9,
+          "riddle": "Who helps you read and learn and write? Check where they work, it's just in sight!",
+          "hint": "Check the teacher's desk.",
+          "spot": "Teacher's desk"
+        },
+        {
+          "n": 10,
+          "riddle": "One last page and then we're done! Look where our holiday decorations shine for everyone!",
+          "hint": "Check the classroom tree or holiday decorations.",
+          "spot": "Classroom tree, holiday display or door"
+        }
+      ]
     }
   }
 }

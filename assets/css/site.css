@@ -413,3 +413,4 @@ body { background: #fff9fd; }
 .voicebtn img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; }
 .voicebtn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
 .voicebtn.playing { background: var(--k1, #6b3fa0); color: #fff; border-color: transparent; }
+.modepick { display: flex; gap: 10px; flex-wrap: wrap; } .modepick .btn { flex: 1 1 140px; }
