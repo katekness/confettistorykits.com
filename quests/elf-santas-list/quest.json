@@ -265,6 +265,7 @@
   "etsyUrl": "https://confettistorykits.etsy.com/listing/4611081279/elf-scavenger-hunt-game-santas-list",
   "price": "9.97",
   "voice": {
+    "samples": {"elf": "audio/elf-sample.mp3"},
     "intro": [
       "audio/elf-intro-1.mp3",
       "audio/elf-intro-2.mp3"
