@@ -433,3 +433,12 @@ body { background: #fff9fd; }
 @media (prefers-reduced-motion: reduce) { .h-voice .bars i { animation: none; } }
 @media (max-width: 820px) { .hero3-art { height: 400px; } }
 @media (max-width: 520px) { .hero3-art { height: 330px; } .h-voice { font-size: 1rem; right: 6%; } }
+.h-card { width: 64%; }
+.h-elf { left: -2%; top: 6%; }
+.h-pir { left: 4%; bottom: 2%; }
+@media (max-width: 520px) {
+  .hero3-art { height: 340px; }
+  .h-elf { display: none; }
+  .h-pir { width: 72%; left: 0; top: 14%; bottom: auto; }
+  .hero2 .eyebrow { font-size: .72rem; letter-spacing: .04em; }
+}
