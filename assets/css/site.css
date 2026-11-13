@@ -442,3 +442,14 @@ body { background: #fff9fd; }
   .h-pir { width: 72%; left: 0; top: 14%; bottom: auto; }
   .hero2 .eyebrow { font-size: .72rem; letter-spacing: .04em; }
 }
+
+/* price + Etsy sale (sale parts show only when <html class="on-sale">) */
+.pricetag { margin: 6px 0 12px; font-size: .98rem; color: var(--muted); }
+.pricetag b { font: 700 1.35rem "Fredoka", sans-serif; color: var(--ink); margin-right: 6px; }
+.pricetag s { color: var(--muted); margin-right: 4px; }
+.pricetag em { display: inline-block; font-style: normal; font-weight: 800; font-size: .82rem; color: #fff; background: #e8456b; padding: 3px 10px; border-radius: 999px; margin-left: 4px; vertical-align: 2px; }
+.on-sale [data-sale][hidden] { display: inline; }
+.on-sale .pricetag [data-reg] { display: none; }
+.salebar { display: none; text-align: center; padding: 10px 16px; background: #3b1d4c; color: #fff; font-weight: 700; font-size: .95rem; text-decoration: none; }
+.salebar b { color: #ffd166; }
+.on-sale .salebar { display: block; }
