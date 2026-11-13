@@ -131,7 +131,8 @@
     }
   ],
   "found": [
-    "You found a page! Juniper is so relieved!",
+    "You found a page!",
+    "Juniper is so relieved!",
     "Another page saved for Santa!",
     "Jingle, jingle, great job!",
     "The list is coming together!",
@@ -261,5 +262,64 @@
     ]
   },
   "accessHash": "9dee27f57cdfa967fb3cfae7081de9eb4150b5a4566d240f29f30809da3e985b",
-  "etsyUrl": "https://confettistorykits.etsy.com/listing/4611081279/elf-scavenger-hunt-game-santas-list"
+  "etsyUrl": "https://confettistorykits.etsy.com/listing/4611081279/elf-scavenger-hunt-game-santas-list",
+  "voice": {
+    "intro": [
+      "audio/elf-intro-1.mp3",
+      "audio/elf-intro-2.mp3"
+    ],
+    "finale": [
+      "audio/elf-finale-1.mp3"
+    ],
+    "cheers": [
+      "audio/elf-cheer-1.mp3",
+      "audio/elf-cheer-2.mp3",
+      "audio/elf-cheer-3.mp3",
+      "audio/elf-cheer-4.mp3",
+      "audio/elf-cheer-5.mp3",
+      "audio/elf-cheer-6.mp3"
+    ],
+    "steps": {
+      "1": {
+        "riddle": "audio/elf-step1-riddle.mp3",
+        "hint": "audio/elf-step1-hint.mp3"
+      },
+      "2": {
+        "riddle": "audio/pip-step2-riddle.mp3",
+        "hint": "audio/pip-step2-hint.mp3"
+      },
+      "3": {
+        "riddle": "audio/elf-step3-riddle.mp3",
+        "hint": "audio/elf-step3-hint.mp3"
+      },
+      "4": {
+        "riddle": "audio/pip-step4-riddle.mp3",
+        "hint": "audio/pip-step4-hint.mp3"
+      },
+      "5": {
+        "riddle": "audio/elf-step5-riddle.mp3",
+        "hint": "audio/elf-step5-hint.mp3"
+      },
+      "6": {
+        "riddle": "audio/pip-step6-riddle.mp3",
+        "hint": "audio/pip-step6-hint.mp3"
+      },
+      "7": {
+        "riddle": "audio/elf-step7-riddle.mp3",
+        "hint": "audio/elf-step7-hint.mp3"
+      },
+      "8": {
+        "riddle": "audio/pip-step8-riddle.mp3",
+        "hint": "audio/pip-step8-hint.mp3"
+      },
+      "9": {
+        "riddle": "audio/elf-step9-riddle.mp3",
+        "hint": "audio/elf-step9-hint.mp3"
+      },
+      "10": {
+        "riddle": "audio/pip-step10-riddle.mp3",
+        "hint": "audio/pip-step10-hint.mp3"
+      }
+    }
+  }
 }
