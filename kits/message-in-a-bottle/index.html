@@ -44,6 +44,19 @@
         <p class="note">No laundry room? Use a blank card and type your own clue into the Quest Master.</p></section>
     </div>
 
+
+    <section class="card panel voices">
+      <h2>Hear the characters</h2>
+      <p>On the phone, every clue is read out loud in the character's own voice. Tap to listen.</p>
+      <div class="voicegrid"><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/starwave-intro-1.mp3"><img src="../../quests/message-in-a-bottle/img/starwave-face.webp" alt=""><span>▶ Captain Starwave</span></button><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/finn-step1-meet.mp3"><img src="../../quests/message-in-a-bottle/img/finn-face.webp" alt=""><span>▶ First Mate Finn</span></button><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/mango-step2-meet.mp3"><img src="../../quests/message-in-a-bottle/img/mango-face.webp" alt=""><span>▶ Mango the Parrot</span></button><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/ollie-step4-meet.mp3"><img src="../../quests/message-in-a-bottle/img/ollie-face.webp" alt=""><span>▶ Ollie the Octopus</span></button><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/sway-step5-meet.mp3"><img src="../../quests/message-in-a-bottle/img/sway-face.webp" alt=""><span>▶ Sway the Seaweed Sprite</span></button><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/claw-step7-meet.mp3"><img src="../../quests/message-in-a-bottle/img/claw-face.webp" alt=""><span>▶ Captain Claw</span></button><button class="voicebtn" type="button" data-src="../../quests/message-in-a-bottle/audio/pearla-step9-meet.mp3"><img src="../../quests/message-in-a-bottle/img/pearla-face.webp" alt=""><span>▶ Pearla the Mermaid</span></button></div>
+    </section>
+    <script>
+    (function(){var a=null,cur=null;document.querySelectorAll('.voicebtn').forEach(function(b){b.addEventListener('click',function(){
+      if(a){a.pause();cur&&cur.classList.remove('playing');}
+      if(cur===b){cur=null;return;}
+      a=new Audio(b.dataset.src);cur=b;b.classList.add('playing');a.onended=function(){b.classList.remove('playing');cur=null;};a.play();
+    });});})();
+    </script>
     <section class="card panel">
       <h2>How it works</h2>
       <ol><li>Print and cut the cards (about 15 minutes).</li><li>Hide them using the checklist. Clue #1 stays in your hand.</li>

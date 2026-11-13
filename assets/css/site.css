@@ -406,3 +406,10 @@ body { background: #fff9fd; }
 .kit3 .kit3-lead { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
 @media (max-width: 820px) { .kit3-title { height: 96px; } .kit3-art { height: 210px; } }
 .speaker.wide img.char { width: 150px; }
+
+/* Hear the characters */
+.voices .voicegrid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.voicebtn { display: inline-flex; align-items: center; gap: 10px; border: 2px solid var(--line, #eadcf2); background: #fff; border-radius: 999px; padding: 6px 18px 6px 6px; font: 700 1rem var(--display, Fredoka, sans-serif); color: var(--k1, #6b3fa0); cursor: pointer; transition: transform .15s ease, box-shadow .15s ease; }
+.voicebtn img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; }
+.voicebtn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }
+.voicebtn.playing { background: var(--k1, #6b3fa0); color: #fff; border-color: transparent; }

@@ -44,6 +44,19 @@
         <p class="note">No laundry room? Use a blank card and type your own clue into the Quest Master.</p></section>
     </div>
 
+
+    <section class="card panel voices">
+      <h2>Hear the characters</h2>
+      <p>On the phone, every clue is read out loud in the character's own voice. Tap to listen.</p>
+      <div class="voicegrid"><button class="voicebtn" type="button" data-src="../../quests/elf-santas-list/audio/elf-intro-1.mp3"><img src="../../quests/elf-santas-list/img/elf-face.webp" alt=""><span>▶ Juniper the Elf</span></button><button class="voicebtn" type="button" data-src="../../quests/elf-santas-list/audio/pip-step2-riddle.mp3"><img src="../../quests/elf-santas-list/img/pip-face.webp" alt=""><span>▶ Pip the Reindeer</span></button></div>
+    </section>
+    <script>
+    (function(){var a=null,cur=null;document.querySelectorAll('.voicebtn').forEach(function(b){b.addEventListener('click',function(){
+      if(a){a.pause();cur&&cur.classList.remove('playing');}
+      if(cur===b){cur=null;return;}
+      a=new Audio(b.dataset.src);cur=b;b.classList.add('playing');a.onended=function(){b.classList.remove('playing');cur=null;};a.play();
+    });});})();
+    </script>
     <section class="card panel">
       <h2>How it works</h2>
       <ol><li>Print and cut the cards (about 5 minutes).</li><li>Hide them using the checklist. Clue #1 stays in your hand.</li>
