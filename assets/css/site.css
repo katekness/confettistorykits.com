@@ -453,3 +453,16 @@ body { background: #fff9fd; }
 .salebar { display: none; text-align: center; padding: 10px 16px; background: #3b1d4c; color: #fff; font-weight: 700; font-size: .95rem; text-decoration: none; }
 .salebar b { color: #ffd166; }
 .on-sale .salebar { display: block; }
+
+/* /links (link in bio) */
+.links { max-width: 520px; margin: 0 auto; padding: 36px 16px 48px; text-align: center; }
+.links-logo { height: 84px; margin-bottom: 8px; }
+.links-tag { font-weight: 700; color: var(--ink); margin: 0 0 18px; }
+.lnk-note { background: #fff6d6; border: 2px solid #f4c542; border-radius: 16px; padding: 10px 14px; font-size: .95rem; margin: 0 0 16px; }
+.lnk { display: flex; align-items: center; gap: 14px; text-align: left; background: #fff; border: 3px solid var(--ks, #f3e6fb); border-radius: 22px; padding: 10px 16px 10px 10px; margin: 0 0 12px; text-decoration: none; color: var(--ink); box-shadow: 0 6px 16px rgba(59,29,76,.08); transition: transform .15s; }
+.lnk:hover { transform: translateY(-2px); }
+.lnk img { width: 72px; height: 72px; object-fit: contain; border-radius: 14px; background: var(--ks, #f3e6fb); flex: none; }
+.lnk b { display: block; font: 700 1.08rem/1.2 "Fredoka", sans-serif; color: var(--k1, var(--ink)); }
+.lnk small { display: block; color: var(--muted); font-size: .9rem; margin-top: 2px; }
+.lnk-plain { justify-content: center; text-align: center; padding: 16px; }
+.links-foot { margin-top: 22px; font-size: .9rem; }
